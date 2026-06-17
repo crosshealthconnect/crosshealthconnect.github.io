@@ -429,6 +429,7 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--primary-green);
+            cursor: pointer;
         }
         
         .story-info h4 {
@@ -545,9 +546,8 @@
         /* Floating Contact Center */
         .contact-float {
             position: fixed;
-            right: 40px;
-            top: 50%;
-            transform: translateY(-50%);
+            right: 20px;
+            bottom: 20px;
             z-index: 1000;
             display: flex;
             flex-direction: column;
@@ -592,6 +592,30 @@
         
         .contact-btn:hover .tooltip {
             opacity: 1;
+        }
+        
+        /* WhatsApp Float */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 12px 25px rgba(37,211,102,0.4);
         }
         
         /* Form */
@@ -658,6 +682,7 @@
             border: 6px solid var(--primary-green);
             box-shadow: 0 10px 30px rgba(46,139,87,0.2);
             margin: 0 auto 24px;
+            cursor: pointer;
         }
         
         .founder-text h3 {
@@ -898,6 +923,18 @@
             .timeline-item {
                 padding-left: 60px;
             }
+            
+            .contact-float {
+                right: 20px;
+                bottom: 100px;
+                flex-direction: row;
+                gap: 12px;
+            }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -943,6 +980,11 @@
             .contact-float {
                 display: none;
             }
+            
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+            }
         }
         
         /* Animations */
@@ -966,47 +1008,6 @@
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-        }
-        
-        /* Image Upload Styling */
-        .image-upload-container {
-            position: relative;
-            display: inline-block;
-            margin: 10px;
-        }
-        
-        .image-upload-label {
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .image-preview {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--primary-green);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-        
-        .edit-image-btn {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: var(--primary-green);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -1101,7 +1102,7 @@
     <section id="founder-story">
         <div class="container">
             <div class="founder-section reveal">
-                <img src="https://via.placeholder.com/200x200/2E8B57/FFFFFF?text=Emmanuel+Maeke+Kioko" alt="Emmanuel Maeke Kioko - Founder of CrossHealthConnect" class="founder-image" id="founderImage">
+                <img src="https://via.placeholder.com/200x200/2E8B57/FFFFFF?text=Founder" alt="Emmanuel Maeke Kioko - Founder of CrossHealthConnect" class="founder-image" id="founderImage">
                 <div class="founder-text">
                     <h3>Why CrossHealthConnect Exists</h3>
                     <p>After personally experiencing the challenges of seeking treatment abroad and building relationships with healthcare providers, I, Emmanuel Maeke Kioko, created CrossHealthConnect to make the process easier for others.</p>
@@ -1184,9 +1185,9 @@
                 <!-- Story 1 -->
                 <div class="story-card reveal">
                     <div class="story-header">
-                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=AM" alt="Amina M." class="story-avatar" id="aminaImage">
+                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=Amina" alt="Amina" class="story-avatar" id="aminaImage">
                         <div class="story-info">
-                            <h4>Amina M., Nairobi</h4>
+                            <h4>Amina, Nairobi</h4>
                             <p>Kenya</p>
                         </div>
                     </div>
@@ -1200,9 +1201,9 @@
                 <!-- Story 2 -->
                 <div class="story-card reveal">
                     <div class="story-header">
-                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=JO" alt="Jabari O." class="story-avatar" id="jabariImage">
+                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=Jabari" alt="Jabari" class="story-avatar" id="jabariImage">
                         <div class="story-info">
-                            <h4>Jabari O., Kampala</h4>
+                            <h4>Jabari, Kampala</h4>
                             <p>Uganda</p>
                         </div>
                     </div>
@@ -1216,9 +1217,9 @@
                 <!-- Story 3 -->
                 <div class="story-card reveal">
                     <div class="story-header">
-                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=FA" alt="Fatima A." class="story-avatar" id="fatimaImage">
+                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=Fatima" alt="Fatima" class="story-avatar" id="fatimaImage">
                         <div class="story-info">
-                            <h4>Fatima A., Dar es Salaam</h4>
+                            <h4>Fatima, Dar es Salaam</h4>
                             <p>Tanzania</p>
                         </div>
                     </div>
@@ -1232,9 +1233,9 @@
                 <!-- Story 4 -->
                 <div class="story-card reveal">
                     <div class="story-header">
-                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=NW" alt="Nia W." class="story-avatar" id="niaImage">
+                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=Nia" alt="Nia" class="story-avatar" id="niaImage">
                         <div class="story-info">
-                            <h4>Nia W., Mombasa</h4>
+                            <h4>Nia, Mombasa</h4>
                             <p>Kenya</p>
                         </div>
                     </div>
@@ -1248,9 +1249,9 @@
                 <!-- Story 5 -->
                 <div class="story-card reveal">
                     <div class="story-header">
-                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=KK" alt="Kwame K." class="story-avatar" id="kwameImage">
+                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=Kwame" alt="Kwame" class="story-avatar" id="kwameImage">
                         <div class="story-info">
-                            <h4>Kwame K., Accra</h4>
+                            <h4>Kwame, Accra</h4>
                             <p>Ghana</p>
                         </div>
                     </div>
@@ -1264,9 +1265,9 @@
                 <!-- Story 6 -->
                 <div class="story-card reveal">
                     <div class="story-header">
-                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=ZM" alt="Zawadi M." class="story-avatar" id="zawadiImage">
+                        <img src="https://via.placeholder.com/60x60/2E8B57/FFFFFF?text=Zawadi" alt="Zawadi" class="story-avatar" id="zawadiImage">
                         <div class="story-info">
-                            <h4>Zawadi M., Arusha</h4>
+                            <h4>Zawadi, Arusha</h4>
                             <p>Tanzania</p>
                         </div>
                     </div>
@@ -1584,13 +1585,13 @@
             <i class="fas fa-envelope"></i>
             <span class="tooltip">Email</span>
         </a>
+        <a href="https://wa.me/254750715218" target="_blank" class="contact-btn">
+            <i class="fas fa-whatsapp"></i>
+            <span class="tooltip">WhatsApp</span>
+        </a>
         <a href="tel:+254750715218" class="contact-btn">
             <i class="fas fa-phone"></i>
             <span class="tooltip">Call</span>
-        </a>
-        <a href="#" class="contact-btn" onclick="if(typeof TinyChat !== 'undefined') TinyChat.open(); return false;">
-            <i class="fas fa-comments"></i>
-            <span class="tooltip">Chat</span>
         </a>
     </div>
 
@@ -1700,12 +1701,12 @@
 
         // Setup image uploads for all placeholder images
         setupImageUpload('founderImage', 'Founder');
-        setupImageUpload('aminaImage', 'Amina M.');
-        setupImageUpload('jabariImage', 'Jabari O.');
-        setupImageUpload('fatimaImage', 'Fatima A.');
-        setupImageUpload('niaImage', 'Nia W.');
-        setupImageUpload('kwameImage', 'Kwame K.');
-        setupImageUpload('zawadiImage', 'Zawadi M.');
+        setupImageUpload('aminaImage', 'Amina');
+        setupImageUpload('jabariImage', 'Jabari');
+        setupImageUpload('fatimaImage', 'Fatima');
+        setupImageUpload('niaImage', 'Nia');
+        setupImageUpload('kwameImage', 'Kwame');
+        setupImageUpload('zawadiImage', 'Zawadi');
     </script>
 </body>
 </html>
