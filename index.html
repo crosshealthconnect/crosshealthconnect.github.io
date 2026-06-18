@@ -288,23 +288,6 @@
             gap: 15px;
         }
 
-        .hero-image {
-            position: absolute;
-            right: 5%;
-            bottom: 0;
-            max-width: 500px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
         /* Trust Banner */
         #trust-banner {
             padding: 40px 0;
@@ -368,9 +351,11 @@
 
         .about-img img {
             width: 100%;
-            height: auto;
+            height: 400px;
+            object-fit: cover;
             display: block;
             transition: var(--transition);
+            border-radius: 15px;
         }
 
         .about-img:hover img {
@@ -406,23 +391,17 @@
 
         .founder-img {
             text-align: center;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
         }
 
         .founder-img img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
             display: block;
-            border-radius: 15px;
-            transition: var(--transition);
             margin: 0 auto;
-        }
-
-        .founder-img:hover img {
-            transform: scale(1.05);
+            border: 5px solid var(--primary);
+            box-shadow: var(--shadow);
         }
 
         .founder-text h3 {
@@ -788,6 +767,11 @@
             margin-bottom: 10px;
         }
 
+        .country-card p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
         /* Testimonials Section */
         #testimonials {
             padding: 100px 0;
@@ -851,6 +835,14 @@
             gap: 15px;
         }
 
+        .author img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary);
+        }
+
         .author-info h4 {
             font-size: 1.2rem;
             color: var(--dark);
@@ -861,6 +853,30 @@
             font-size: 0.95rem;
             color: #6c757d;
             font-style: normal;
+        }
+
+        /* Hospitals Section */
+        #hospitals {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .hospitals-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hospitals-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .hospitals-content p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            line-height: 1.8;
         }
 
         /* Contact Form Section */
@@ -1177,10 +1193,6 @@
                 max-width: 100%;
             }
 
-            .hero-image {
-                display: none;
-            }
-
             .timeline-item {
                 width: 100%;
                 padding-left: 50px;
@@ -1332,7 +1344,6 @@
                 </div>
             </div>
         </div>
-        <img src="images/doctor-patient.jpg" alt="African patient talking with international doctor" class="hero-image" loading="eager">
     </section>
 
     <!-- Trust Banner -->
@@ -1641,6 +1652,16 @@
         </div>
     </section>
 
+    <!-- Hospitals Section -->
+    <section id="hospitals">
+        <div class="container">
+            <div class="hospitals-content">
+                <h2>Hospital Collaborations</h2>
+                <p>We are in collaboration with the best hospitals in our network countries to provide you with world-class medical care. Our team is continuously working to establish partnerships with top healthcare providers to ensure you receive the best possible treatment.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
@@ -1653,6 +1674,7 @@
                     <div class="testimonial-content">
                         <p>CrossHealthConnect made it possible for my father to receive life-saving heart surgery in India. The entire process, from initial consultation to post-surgery follow-up, was seamless. We couldn't have asked for better support during such a difficult time.</p>
                         <div class="author">
+                            <img src="images/patient1.jpg" alt="Heart Surgery Patient from Nairobi" loading="lazy">
                             <div class="author-info">
                                 <h4>Heart Surgery Patient</h4>
                                 <p>Nairobi, Kenya</p>
@@ -1664,6 +1686,7 @@
                     <div class="testimonial-content">
                         <p>I was diagnosed with a complex condition and needed specialized treatment that wasn't available in Kenya. CrossHealthConnect connected me with a top oncologist in Turkey. They handled all the logistics, including my visa and accommodation. Today, I'm on the path to recovery, thanks to their exceptional service.</p>
                         <div class="author">
+                            <img src="images/patient2.jpg" alt="Cancer Treatment Patient from Kampala" loading="lazy">
                             <div class="author-info">
                                 <h4>Cancer Treatment Patient</h4>
                                 <p>Kampala, Uganda</p>
@@ -1675,6 +1698,7 @@
                     <div class="testimonial-content">
                         <p>As a mother, my biggest fear was not being able to afford quality healthcare for my child. CrossHealthConnect not only found us an affordable option in Thailand but also ensured we felt supported every step of the way. My daughter is now healthy and thriving, and I'm forever grateful.</p>
                         <div class="author">
+                            <img src="images/patient3.jpg" alt="Orthopedic Patient from Dar es Salaam" loading="lazy">
                             <div class="author-info">
                                 <h4>Orthopedic Patient</h4>
                                 <p>Dar es Salaam, Tanzania</p>
@@ -1855,7 +1879,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 CrossHealthConnect. All Rights Reserved. Made with <i class="fas fa-heart"></i> in Kenya</p>
+                <p>&copy; 2026 CrossHealthConnect. All Rights Reserved.  
             </div>
         </div>
     </footer>
@@ -1948,7 +1972,7 @@
         }, observerOptions);
 
         // Observe all animated elements
-        const animatedElements = document.querySelectorAll('.step-card, .testimonial-card, .country-card, .partner-card, .why-card, .trust-card, .faq-item, .stat-card, .timeline-item, .help-card, .support-card, .medical-tourism-item, .trust-banner-item');
+        const animatedElements = document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-card, .help-card, .support-card, .medical-tourism-item, .trust-banner-item');
         animatedElements.forEach(el => observer.observe(el));
 
         // Form Submission with Formspree
