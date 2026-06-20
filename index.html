@@ -774,20 +774,81 @@
             display: none;
         }
 
-        /* Treatment Quiz */
-        #treatment-quiz {
+        /* Patient Journey Highlights */
+        #patient-journey {
             padding: 80px 0;
             background: var(--light);
         }
 
-        body.dark-mode #treatment-quiz {
+        body.dark-mode #patient-journey {
             background: var(--dark-mode-card);
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .journey-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #e0e0e0;
+        }
+
+        body.dark-mode .journey-card {
+            background: var(--dark-mode-card);
+        }
+
+        .journey-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .journey-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .journey-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        body.dark-mode .journey-card h3 {
+            color: var(--dark-mode-text);
+        }
+
+        .journey-card p {
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        body.dark-mode .journey-card p {
+            color: #adb5bd;
+        }
+
+        /* Treatment Quiz */
+        #treatment-quiz {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        body.dark-mode #treatment-quiz {
+            background: var(--dark-mode-bg);
         }
 
         .quiz-container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--white);
+            background: var(--light);
             padding: 40px;
             border-radius: 20px;
             box-shadow: var(--shadow);
@@ -832,7 +893,7 @@
 
         .quiz-option {
             padding: 15px;
-            background: var(--light);
+            background: var(--white);
             border: 2px solid #e0e0e0;
             border-radius: 10px;
             cursor: pointer;
@@ -866,79 +927,6 @@
             border-radius: 10px;
             margin-top: 20px;
             display: none;
-        }
-
-        /* Patient Stories */
-        #patient-stories {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        body.dark-mode #patient-stories {
-            background: var(--dark-mode-bg);
-        }
-
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .story-card {
-            background: var(--light);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        body.dark-mode .story-card {
-            background: var(--dark-mode-card);
-        }
-
-        .story-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .story-card video {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .story-content {
-            padding: 20px;
-        }
-
-        .story-content p {
-            font-style: italic;
-            color: var(--dark);
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        body.dark-mode .story-content p {
-            color: var(--dark-mode-text);
-        }
-
-        .story-content .author-info h4 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        body.dark-mode .story-content .author-info h4 {
-            color: var(--dark-mode-text);
-        }
-
-        .story-content .author-info p {
-            font-size: 0.95rem;
-            color: #6c757d;
-        }
-
-        body.dark-mode .story-content .author-info p {
-            color: #adb5bd;
         }
 
         /* How It Works Section */
@@ -1896,6 +1884,38 @@
             pointer-events: none;
         }
 
+        /* Country Flags Circle */
+        .countries-flags {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .flag-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        body.dark-mode .flag-circle {
+            background: var(--dark-mode-card);
+        }
+
+        .flag-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .hero-content h1 {
@@ -1917,24 +1937,6 @@
 
             .hero-content {
                 max-width: 100%;
-            }
-
-            .timeline-item {
-                width: 100%;
-                padding-left: 50px;
-                padding-right: 25px;
-            }
-
-            .timeline-item::after {
-                left: 10px;
-            }
-
-            .timeline-item.right {
-                left: 0%;
-            }
-
-            .timeline-item.right::after {
-                left: 10px;
             }
         }
 
@@ -2045,6 +2047,12 @@
             .dark-mode-toggle {
                 bottom: 140px;
             }
+
+            .flag-circle {
+                width: 60px;
+                height: 60px;
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
@@ -2067,8 +2075,7 @@
                     <a href="#what-we-help-with">Treatments</a>
                     <a href="#cost-calculator">Cost Calculator</a>
                     <a href="#treatment-quiz">Treatment Quiz</a>
-                    <a href="#patient-stories">Patient Stories</a>
-                    <a href="#before-after">Before & After</a>
+                    <a href="#patient-journey">Patient Journey</a>
                     <a href="#testimonials">Testimonials</a>
                     <a href="#contact-form">Contact</a>
                 </div>
@@ -2098,17 +2105,17 @@
         <div class="counter-item">
             <i class="fas fa-users"></i>
             <span id="patientCounter">0</span>
-            <p>Patients Helped</p>
+            <p>Patients Assisted</p>
         </div>
         <div class="counter-item">
             <i class="fas fa-globe"></i>
             <span id="countryCounter">0</span>
-            <p>Countries Served</p>
+            <p>Countries Supported</p>
         </div>
         <div class="counter-item">
             <i class="fas fa-heart"></i>
             <span id="treatmentCounter">0</span>
-            <p>Treatments Facilitated</p>
+            <p>Treatment Inquiries Guided</p>
         </div>
     </div>
 
@@ -2169,7 +2176,7 @@
             </div>
             <div class="founder-grid">
                 <div class="founder-img">
-                    <img src="images/founder-animated.gif" alt="Animated illustration of Emmanuel Maeke Kioko's journey" loading="lazy">
+                    <img src="founder.jpg" alt="Emmanuel Maeke Kioko, Founder of CrossHealthConnect" loading="lazy">
                 </div>
                 <div class="founder-text">
                     <p>CrossHealthConnect was born from a simple realization: too many African patients know they need specialized treatment but don't know where to start.</p>
@@ -2237,13 +2244,12 @@
                         <label for="countrySelect">Preferred Country</label>
                         <select id="countrySelect">
                             <option value="" disabled selected>Select country</option>
-                            <option value="India">India</option>
-                            <option value="Turkey">Turkey</option>
-                            <option value="UAE">UAE</option>
-                            <option value="Thailand">Thailand</option>
-                            <option value="Germany">Germany</option>
-                            <option value="UK">United Kingdom</option>
-                            <option value="Kenya">Kenya (Local)</option>
+                            <option value="India">🇮🇳 India</option>
+                            <option value="Turkey">🇹🇷 Turkey</option>
+                            <option value="UAE">🇦🇪 UAE</option>
+                            <option value="Thailand">🇹🇭 Thailand</option>
+                            <option value="Germany">🇩🇪 Germany</option>
+                            <option value="UK">🇬🇧 United Kingdom</option>
                         </select>
                     </div>
                 </div>
@@ -2272,43 +2278,29 @@
         </div>
     </section>
 
-    <!-- Patient Stories -->
-    <section id="patient-stories">
+    <!-- Patient Journey Highlights -->
+    <section id="patient-journey">
         <div class="container">
             <div class="section-title">
-                <h2>Real Stories, Real Impact</h2>
-                <p>Hear from patients who trusted us with their health</p>
+                <h2>Patient Journey Highlights</h2>
+                <p>Examples of how we help patients access international healthcare opportunities and make informed treatment decisions.</p>
             </div>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <video controls poster="images/patient1-poster.jpg" loading="lazy">
-                        <source src="videos/patient1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="story-content">
-                        <p>"CrossHealthConnect saved my life! The team guided me through every step of my heart surgery in India."</p>
-                        <div class="author-info">
-                            <h4>Jane Mwangi</h4>
-                            <p>Nairobi, Kenya</p>
-                        </div>
-                    </div>
+            <div class="journey-grid">
+                <div class="journey-card">
+                    <i class="fas fa-user-injured"></i>
+                    <h3>Heart Surgery in India</h3>
+                    <p>A patient from Nairobi received life-saving heart surgery in India at a fraction of the local cost. We handled all logistics, from hospital selection to post-surgery follow-up.</p>
                 </div>
-                <div class="story-card">
-                    <video controls poster="images/patient2-poster.jpg" loading="lazy">
-                        <source src="videos/patient2.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="story-content">
-                        <p>"I never thought I could afford cancer treatment. CrossHealthConnect connected me with a top hospital in Turkey at a fraction of the cost."</p>
-                        <div class="author-info">
-                            <h4>John Omondi</h4>
-                            <p>Kisumu, Kenya</p>
-                        </div>
-                    </div>
+                <div class="journey-card">
+                    <i class="fas fa-kidneys"></i>
+                    <h3>Kidney Transplant in Turkey</h3>
+                    <p>A Kenyan family struggled to find a compatible donor locally. We connected them with a top hospital in Turkey, where the patient received a successful kidney transplant.</p>
                 </div>
-            </div>
-            <div style="text-align: center; margin-top: 40px;">
-                <a href="#contact-form" class="btn btn-outline">Share Your Story</a>
+                <div class="journey-card">
+                    <i class="fas fa-female"></i>
+                    <h3>Cancer Treatment in UAE</h3>
+                    <p>A patient from Uganda accessed cutting-edge cancer treatment in the UAE. Our team ensured seamless coordination, including visa assistance and accommodation.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -2495,39 +2487,36 @@
                 <h2>Healthcare Destinations</h2>
                 <p>World-class medical treatment options across the globe</p>
             </div>
+            <div class="countries-flags">
+                <div class="flag-circle">🇮🇳</div>
+                <div class="flag-circle">🇹🇷</div>
+                <div class="flag-circle">🇦🇪</div>
+                <div class="flag-circle">🇹🇭</div>
+                <div class="flag-circle">🇩🇪</div>
+                <div class="flag-circle">🇬🇧</div>
+            </div>
             <div class="countries-grid">
                 <div class="country-card">
-                    <div class="flag">🇮🇳</div>
                     <h4>India</h4>
                     <p>Affordable & High-Quality Treatment</p>
                 </div>
                 <div class="country-card">
-                    <div class="flag">🇹🇷</div>
                     <h4>Turkey</h4>
                     <p>Advanced Medical Technology</p>
                 </div>
                 <div class="country-card">
-                    <div class="flag">🇦🇪</div>
                     <h4>UAE</h4>
                     <p>Luxury & Premium Healthcare</p>
                 </div>
                 <div class="country-card">
-                    <div class="flag">🇹🇭</div>
                     <h4>Thailand</h4>
                     <p>World-Class Hospitals & Tourism</p>
                 </div>
                 <div class="country-card">
-                    <div class="flag">🇿🇦</div>
-                    <h4>South Africa</h4>
-                    <p>Expert Specialists & Scenic Recovery</p>
-                </div>
-                <div class="country-card">
-                    <div class="flag">🇩🇪</div>
                     <h4>Germany</h4>
                     <p>Cutting-Edge Medical Innovation</p>
                 </div>
                 <div class="country-card">
-                    <div class="flag">🇬🇧</div>
                     <h4>United Kingdom</h4>
                     <p>World-Renowned Healthcare System</p>
                 </div>
@@ -2684,7 +2673,6 @@
                                 <option value="Turkey">Turkey</option>
                                 <option value="UAE">UAE</option>
                                 <option value="Thailand">Thailand</option>
-                                <option value="South Africa">South Africa</option>
                                 <option value="Germany">Germany</option>
                                 <option value="UK">United Kingdom</option>
                             </select>
@@ -2758,7 +2746,6 @@
                         <a href="#">Turkey</a>
                         <a href="#">UAE</a>
                         <a href="#">Thailand</a>
-                        <a href="#">South Africa</a>
                         <a href="#">Germany</a>
                         <a href="#">United Kingdom</a>
                     </ul>
@@ -2865,7 +2852,7 @@
         }, observerOptions);
 
         // Observe all animated elements
-        const animatedElements = document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-banner-item, .help-card, .support-card, .medical-tourism-item, .story-card');
+        const animatedElements = document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-banner-item, .help-card, .support-card, .medical-tourism-item, .journey-card');
         animatedElements.forEach(el => observer.observe(el));
 
         // Form Submission with Formspree
@@ -2897,7 +2884,7 @@
                 }
             } catch (error) {
                 formMessage.style.display = 'block';
-                formMessage.innerHTML = '<div style="color: #dc3545; padding: 15px; background: #f8d7da; border-radius: 8px;"><i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or contact us directly.</div>';
+                formMessage.innerHTML = '<div style="color: #dc3545; padding: 15px; background: #f8d7da; border-radius: 8px;"><i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or contact us directly at +254 750 715 218.</div>';
             } finally {
                 submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Request';
                 submitBtn.disabled = false;
@@ -2946,9 +2933,9 @@
 
         // Animate counters when they come into view
         const counters = [
-            { element: document.getElementById('patientCounter'), target: 1247 },
-            { element: document.getElementById('countryCounter'), target: 12 },
-            { element: document.getElementById('treatmentCounter'), target: 500 }
+            { element: document.getElementById('patientCounter'), target: 13 },
+            { element: document.getElementById('countryCounter'), target: 7 },
+            { element: document.getElementById('treatmentCounter'), target: 20 }
         ];
 
         const counterObserver = new IntersectionObserver((entries) => {
@@ -2975,8 +2962,7 @@
                 UAE: "$12,000 - $20,000",
                 Thailand: "$7,000 - $12,000",
                 Germany: "$20,000 - $35,000",
-                UK: "$25,000 - $40,000",
-                Kenya: "$15,000 - $25,000"
+                UK: "$25,000 - $40,000"
             },
             "Kidney Transplant": {
                 India: "$12,000 - $18,000",
@@ -2984,8 +2970,7 @@
                 UAE: "$20,000 - $30,000",
                 Thailand: "$15,000 - $20,000",
                 Germany: "$30,000 - $50,000",
-                UK: "$40,000 - $60,000",
-                Kenya: "$30,000 - $50,000"
+                UK: "$40,000 - $60,000"
             },
             "Cancer Treatment": {
                 India: "$3,000 - $10,000",
@@ -2993,8 +2978,7 @@
                 UAE: "$8,000 - $20,000",
                 Thailand: "$4,000 - $12,000",
                 Germany: "$15,000 - $30,000",
-                UK: "$20,000 - $40,000",
-                Kenya: "$10,000 - $20,000"
+                UK: "$20,000 - $40,000"
             },
             "Orthopedic Surgery": {
                 India: "$4,000 - $8,000",
@@ -3002,8 +2986,7 @@
                 UAE: "$8,000 - $15,000",
                 Thailand: "$5,000 - $10,000",
                 Germany: "$12,000 - $25,000",
-                UK: "$15,000 - $30,000",
-                Kenya: "$8,000 - $15,000"
+                UK: "$15,000 - $30,000"
             },
             "IVF": {
                 India: "$3,000 - $6,000",
@@ -3011,8 +2994,7 @@
                 UAE: "$5,000 - $10,000",
                 Thailand: "$3,500 - $7,000",
                 Germany: "$8,000 - $15,000",
-                UK: "$10,000 - $20,000",
-                Kenya: "$6,000 - $12,000"
+                UK: "$10,000 - $20,000"
             },
             "Neurology": {
                 India: "$5,000 - $12,000",
@@ -3020,8 +3002,7 @@
                 UAE: "$10,000 - $20,000",
                 Thailand: "$6,000 - $12,000",
                 Germany: "$15,000 - $30,000",
-                UK: "$20,000 - $35,000",
-                Kenya: "$12,000 - $25,000"
+                UK: "$20,000 - $35,000"
             }
         };
 
@@ -3044,13 +3025,11 @@
             }
 
             const cost = treatmentCosts[condition][country];
-            const kenyaCost = treatmentCosts[condition]["Kenya"];
 
             costResult.style.display = 'block';
             costResult.innerHTML = `
                 <h3>Estimated Cost for ${condition} in ${country}</h3>
                 <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">${cost}</p>
-                <p><strong>Kenya (Local):</strong> ${kenyaCost}</p>
                 <p>Note: This is an average range. Actual costs may vary based on hospital, doctor, and specific treatment requirements.</p>
                 <a href="#contact-form" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Get Exact Quote</a>
             `;
