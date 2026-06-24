@@ -3,99 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CrossHealthConnect helps African patients access affordable world-class healthcare in India, Turkey, UAE, Thailand, Germany, and the UK. Connecting Africans to global medical solutions.">
-    <meta name="keywords" content="medical tourism, healthcare abroad, treatment in India, treatment in Turkey, African patients, global healthcare, medical travel, patient companion, care coordinator">
-    <meta property="og:title" content="CrossHealthConnect | Bridging Borders. Healing Lives.">
-    <meta property="og:description" content="Connecting Africans to world-class healthcare in India, Turkey, UAE, Thailand, Germany, and the UK. Your trusted partner for medical travel.">
-    <meta property="og:image" content="images/hero-bg.jpg">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://crosshealthconnect.github.io">
-
+    <meta name="description" content="CrossHealthConnect helps African patients access affordable world-class healthcare in India, Turkey, UAE, Thailand, Germany, and the UK.">
     <title>CrossHealthConnect | Bridging Borders. Healing Lives.</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-
-    <!-- Particles.js for floating animations -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "MedicalBusiness",
-        "name": "CrossHealthConnect",
-        "url": "https://crosshealthconnect.github.io",
-        "description": "Connecting African patients to world-class healthcare globally",
-        "telephone": "+254750715218",
-        "email": "crosshealthconnect@gmail.com",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Nairobi",
-            "addressCountry": "Kenya"
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Emmanuel Maeke Kioko"
-        },
-        "sameAs": [
-            "https://instagram.com/crosshealthconnect",
-            "https://facebook.com/crosshealthconnect",
-            "https://tiktok.com/@crosshealthconnect",
-            "https://twitter.com/crosshealthconnect"
-        ]
-    }
-    </script>
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How much does heart surgery cost in India?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Heart surgery in India typically costs between $5,000 and $10,000, depending on the hospital and complexity."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do you help with visa processing?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! We assist with visa applications, travel arrangements, and local coordination."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Which countries do you cover?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "We connect patients with hospitals in India, Turkey, UAE, Thailand, Germany, South Africa, and the UK."
-                }
-            }
-        ]
-    }
-    </script>
-
+    
     <style>
         :root {
-            --primary: #2E8B57;
-            --secondary: #3498DB;
-            --accent: #20B2AA;
-            --light: #F8F9FA;
-            --dark: #343A40;
-            --success: #28A745;
+            --primary-green: #008060;
+            --secondary-green: #00A86B;
+            --dark-green: #005238;
+            --light-green: #E8F5F0;
+            --dark-text: #2C3E50;
+            --light-text: #7F8C8D;
             --white: #FFFFFF;
-            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --border-color: #E0E7FF;
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.12);
             --transition: all 0.3s ease;
-            --whatsapp-green: #25D366;
-            --dark-mode-bg: #121212;
-            --dark-mode-text: #F8F9FA;
-            --dark-mode-card: #1E1E1E;
+            --bg-light: #F8F9FA;
+            --bg-dark: #1E2A38;
+            --text-dark: #2C3E50;
         }
 
         * {
@@ -105,16 +38,11 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
+            color: var(--text-dark);
             background-color: var(--white);
             overflow-x: hidden;
-        }
-
-        body.dark-mode {
-            background-color: var(--dark-mode-bg);
-            color: var(--dark-mode-text);
         }
 
         a {
@@ -132,181 +60,152 @@
             padding: 0 20px;
         }
 
+        /* Buttons */
         .btn {
             display: inline-block;
             padding: 12px 28px;
-            border-radius: 50px;
+            border-radius: 6px;
             font-weight: 600;
             transition: var(--transition);
             cursor: pointer;
-            border: none;
-            font-size: 1rem;
+            border: 2px solid transparent;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
-            background: var(--primary);
+            background: var(--primary-green);
             color: var(--white);
+            border-color: var(--primary-green);
         }
-
         .btn-primary:hover {
-            background: #257245;
+            background: var(--dark-green);
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(46, 139, 87, 0.3);
+            box-shadow: var(--shadow-md);
         }
 
-        .btn-secondary {
-            background: var(--secondary);
+        .btn-green {
+            background: var(--secondary-green);
             color: var(--white);
+            border-color: var(--secondary-green);
         }
-
-        .btn-secondary:hover {
-            background: #2A80B8;
+        .btn-green:hover {
+            background: #008c5a;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
         }
 
         .btn-outline {
             background: transparent;
-            color: var(--primary);
-            border: 2px solid var(--primary);
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
         }
-
         .btn-outline:hover {
-            background: var(--primary);
+            background: var(--primary-green);
             color: var(--white);
         }
 
+        /* Section Titles */
         .section-title {
             text-align: center;
             margin-bottom: 60px;
         }
-
         .section-title h2 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            color: var(--dark);
+            font-size: 2.5rem;
+            color: var(--text-dark);
             margin-bottom: 15px;
-            letter-spacing: -0.5px;
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
         }
-
-        body.dark-mode .section-title h2 {
-            color: var(--dark-mode-text);
-        }
-
-        .section-title p {
-            font-size: 1.2rem;
-            color: #6c757d;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        body.dark-mode .section-title p {
-            color: #adb5bd;
-        }
-
-        .section-title::after {
+        .section-title h2::after {
             content: '';
-            display: block;
-            width: 60px;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            margin: 20px auto;
+            background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
             border-radius: 2px;
+        }
+        .section-title p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: var(--shadow);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: var(--transition);
             padding: 15px 0;
+            backdrop-filter: blur(10px);
         }
-
-        body.dark-mode header {
-            background: rgba(18, 18, 18, 0.95);
-        }
-
-        header.scrolled {
-            background: rgba(255, 255, 255, 0.98);
-            padding: 10px 0;
-        }
-
-        body.dark-mode header.scrolled {
-            background: rgba(18, 18, 18, 0.98);
-        }
-
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 50px;
-        }
-
         .logo h1 {
             font-size: 1.6rem;
             font-weight: 700;
+            display: flex;
+            gap: 2px;
         }
-
-        .logo h1 span:first-child {
-            color: var(--primary);
+        .logo-cross {
+            color: var(--primary-green);
         }
-
-        .logo h1 span:last-child {
-            color: var(--secondary);
+        .logo-health {
+            color: var(--text-dark);
+        }
+        .logo-connect {
+            color: var(--secondary-green);
         }
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 25px;
         }
-
         .nav-links a {
             font-weight: 500;
-            color: var(--dark);
+            color: var(--text-dark);
             transition: var(--transition);
+            font-size: 0.95rem;
             position: relative;
-            padding: 5px 0;
         }
-
-        body.dark-mode .nav-links a {
-            color: var(--dark-mode-text);
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: var(--transition);
         }
-
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--primary-green);
         }
-
+        .nav-links a:hover::after {
+            width: 100%;
+        }
         .mobile-menu-btn {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--dark);
         }
 
-        body.dark-mode .mobile-menu-btn {
-            color: var(--dark-mode-text);
-        }
-
-        /* Hero Section */
+        /* Hero */
         #hero {
             height: 100vh;
-            background: linear-gradient(135deg, rgba(46, 139, 87, 0.85), rgba(52, 152, 219, 0.85)), url('images/hero-bg.jpg');
+            background: linear-gradient(135deg, rgba(0, 128, 96, 0.85), rgba(0, 168, 107, 0.75)), url('images/hero-bg.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             display: flex;
             align-items: center;
             color: var(--white);
@@ -314,7 +213,6 @@
             position: relative;
             overflow: hidden;
         }
-
         #hero::before {
             content: '';
             position: absolute;
@@ -322,319 +220,202 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.15);
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></svg>');
         }
-
         .hero-content {
-            position: relative;
-            z-index: 1;
             max-width: 650px;
+            position: relative;
+            z-index: 2;
         }
-
         .hero-content h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 800;
             margin-bottom: 20px;
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
-
-        .hero-content h1 span:first-child {
-            color: var(--primary);
-        }
-
-        .hero-content h1 span:last-child {
-            color: var(--secondary);
-        }
-
         .hero-content p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
-
         .hero-buttons {
             display: flex;
             gap: 15px;
+            flex-wrap: wrap;
         }
 
         /* Success Counter */
         .success-counter {
             display: flex;
             justify-content: center;
-            gap: 50px;
-            padding: 30px 0;
-            background: rgba(255, 255, 255, 0.9);
+            gap: 40px;
+            padding: 30px;
+            background: var(--white);
             position: relative;
             z-index: 2;
             margin-top: -50px;
-            border-radius: 15px;
-            max-width: 800px;
+            border-radius: 12px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
         }
-
-        body.dark-mode .success-counter {
-            background: rgba(30, 30, 30, 0.9);
-        }
-
         .counter-item {
             text-align: center;
+            padding: 10px;
         }
-
         .counter-item i {
             font-size: 2rem;
-            color: var(--primary);
+            color: var(--primary-green);
             margin-bottom: 10px;
         }
-
         .counter-item span {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--dark);
+            color: var(--dark-green);
+            display: block;
         }
-
-        body.dark-mode .counter-item span {
-            color: var(--dark-mode-text);
-        }
-
         .counter-item p {
-            font-size: 1rem;
-            color: #6c757d;
-        }
-
-        body.dark-mode .counter-item p {
-            color: #adb5bd;
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
         }
 
         /* Trust Banner */
         #trust-banner {
-            padding: 40px 0;
-            background: var(--light);
+            padding: 60px 0;
+            background: var(--bg-light);
         }
-
-        body.dark-mode #trust-banner {
-            background: var(--dark-mode-card);
-        }
-
         .trust-banner-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
         }
-
         .trust-banner-item {
             display: flex;
             align-items: center;
             gap: 15px;
-            padding: 15px 20px;
+            padding: 20px;
             background: var(--white);
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
             transition: var(--transition);
         }
-
-        body.dark-mode .trust-banner-item {
-            background: var(--dark-mode-card);
-        }
-
         .trust-banner-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary-green);
         }
-
         .trust-banner-item i {
             font-size: 1.5rem;
-            color: var(--primary);
+            color: var(--primary-green);
         }
-
         .trust-banner-item p {
             font-size: 0.95rem;
-            color: var(--dark);
-            font-weight: 500;
+            font-weight: 600;
+            color: var(--text-dark);
         }
 
-        body.dark-mode .trust-banner-item p {
-            color: var(--dark-mode-text);
-        }
-
-        /* About Section */
+        /* About */
         #about {
             padding: 100px 0;
             background: var(--white);
         }
-
-        body.dark-mode #about {
-            background: var(--dark-mode-bg);
-        }
-
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
             align-items: center;
         }
-
         .about-img {
-            text-align: center;
-            border-radius: 15px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--shadow);
+            box-shadow: var(--shadow-md);
+            border: 4px solid var(--white);
+            outline: 1px solid var(--border-color);
             position: relative;
         }
-
-        .about-img::after {
+        .about-img::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, rgba(46, 139, 87, 0.1), rgba(52, 152, 219, 0.1));
+            background: linear-gradient(135deg, rgba(0, 168, 107, 0.1), rgba(0, 128, 96, 0.1));
             z-index: 1;
         }
-
         .about-img img {
             width: 100%;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
             display: block;
-            transition: var(--transition);
-            border-radius: 15px;
         }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
         .about-text h3 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-bottom: 20px;
-            color: var(--dark);
+            color: var(--dark-green);
         }
-
-        body.dark-mode .about-text h3 {
-            color: var(--dark-mode-text);
-        }
-
         .about-text p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: var(--light-text);
         }
 
-        body.dark-mode .about-text p {
-            color: #adb5bd;
-        }
-
-        /* Founder Section */
+        /* Founder */
         #founder {
             padding: 100px 0;
-            background: var(--light);
+            background: var(--bg-light);
         }
-
-        body.dark-mode #founder {
-            background: var(--dark-mode-card);
-        }
-
         .founder-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 40px;
-            align-items: center;
             max-width: 800px;
             margin: 0 auto;
-        }
-
-        .founder-img {
             text-align: center;
         }
-
         .founder-img img {
             width: 200px;
             height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            display: block;
             margin: 0 auto;
-            border: 5px solid var(--primary);
-            box-shadow: var(--shadow);
+            border: 5px solid var(--white);
+            box-shadow: var(--shadow-lg);
+            outline: 2px solid var(--primary-green);
         }
-
-        .founder-text h3 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-            text-align: center;
-        }
-
-        body.dark-mode .founder-text h3 {
-            color: var(--dark-mode-text);
-        }
-
         .founder-text p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            color: #555;
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: var(--light-text);
             line-height: 1.8;
-            text-align: center;
         }
-
-        body.dark-mode .founder-text p {
-            color: #adb5bd;
-        }
-
         .founder-signature {
-            text-align: center;
-            margin-top: 30px;
-            font-weight: 600;
-            color: var(--dark);
+            margin-top: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 1.2rem;
         }
 
-        body.dark-mode .founder-signature {
-            color: var(--dark-mode-text);
-        }
-
-        .play-story-btn {
-            display: block;
-            margin: 20px auto;
-            text-align: center;
-        }
-
-        /* Before & After Slider */
+        /* Before & After */
         #before-after {
-            padding: 80px 0;
+            padding: 100px 0;
             background: var(--white);
         }
-
-        body.dark-mode #before-after {
-            background: var(--dark-mode-bg);
-        }
-
-        .slider-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
         .before-after-slider {
             position: relative;
             width: 100%;
-            height: 400px;
+            height: 450px;
             overflow: hidden;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
             margin: 0 auto;
         }
-
-        .slider-images {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
         .before, .after {
             position: absolute;
             top: 0;
@@ -643,11 +424,9 @@
             height: 100%;
             object-fit: cover;
         }
-
         .after {
             clip-path: inset(0 50% 0 0);
         }
-
         .slider {
             position: absolute;
             bottom: 20px;
@@ -661,1239 +440,213 @@
             outline: none;
             z-index: 10;
         }
-
         .slider::-webkit-slider-thumb {
             -webkit-appearance: none;
-            appearance: none;
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
-            background: var(--primary);
-            cursor: pointer;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
-
-        .slider::-moz-range-thumb {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: var(--primary);
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Cost Calculator */
-        #cost-calculator {
-            padding: 80px 0;
             background: var(--white);
+            border: 3px solid var(--primary-green);
+            cursor: pointer;
         }
 
-        body.dark-mode #cost-calculator {
-            background: var(--dark-mode-bg);
+        /* Forms & Calculators */
+        #cost-calculator, #treatment-quiz {
+            padding: 100px 0;
+            background: var(--bg-light);
         }
-
-        .calculator-container {
+        .calculator-container, .quiz-container {
             max-width: 800px;
             margin: 0 auto;
-            background: var(--light);
+            background: var(--white);
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
         }
-
-        body.dark-mode .calculator-container {
-            background: var(--dark-mode-card);
-        }
-
-        .calculator-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .calculator-container h2 {
-            color: var(--dark-mode-text);
-        }
-
-        .calculator-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
-        }
-
         .form-group {
             margin-bottom: 20px;
         }
-
         .form-group label {
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 600;
-            color: var(--dark);
+            color: var(--text-dark);
         }
-
-        body.dark-mode .form-group label {
-            color: var(--dark-mode-text);
-        }
-
-        .form-group select,
-        .form-group input {
+        .form-group select, .form-group input, .form-group textarea {
             width: 100%;
             padding: 12px;
             border: 1px solid #ced4da;
-            border-radius: 10px;
+            border-radius: 6px;
             font-size: 1rem;
+            font-family: 'Inter', sans-serif;
             transition: var(--transition);
-            font-family: 'Poppins', sans-serif;
-            background: var(--white);
         }
-
-        body.dark-mode .form-group select,
-        body.dark-mode .form-group input {
-            background: var(--dark-mode-card);
-            color: var(--dark-mode-text);
-            border-color: #444;
-        }
-
-        .form-group select:focus,
-        .form-group input:focus {
-            border-color: var(--primary);
+        .form-group select:focus, .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary-green);
             outline: none;
-            box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.1);
+            box-shadow: 0 0 0 3px rgba(0, 128, 96, 0.1);
         }
-
-        #costResult {
-            text-align: center;
-            padding: 20px;
-            background: rgba(46, 139, 87, 0.1);
-            border-radius: 10px;
-            margin-top: 20px;
-            display: none;
-        }
-
-        /* Patient Journey Highlights */
-        #patient-journey {
-            padding: 80px 0;
-            background: var(--light);
-        }
-
-        body.dark-mode #patient-journey {
-            background: var(--dark-mode-card);
-        }
-
-        .journey-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .journey-card {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid #e0e0e0;
-        }
-
-        body.dark-mode .journey-card {
-            background: var(--dark-mode-card);
-        }
-
-        .journey-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .journey-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .journey-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .journey-card h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .journey-card p {
-            color: #6c757d;
-            line-height: 1.6;
-        }
-
-        body.dark-mode .journey-card p {
-            color: #adb5bd;
-        }
-
-        /* Treatment Quiz */
-        #treatment-quiz {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        body.dark-mode #treatment-quiz {
-            background: var(--dark-mode-bg);
-        }
-
-        .quiz-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: var(--light);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
-        }
-
-        body.dark-mode .quiz-container {
-            background: var(--dark-mode-card);
-        }
-
-        .quiz-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .quiz-container h2 {
-            color: var(--dark-mode-text);
-        }
-
-        .quiz-question {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .quiz-question p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .quiz-question p {
-            color: var(--dark-mode-text);
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
         }
 
         .quiz-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
-
         .quiz-option {
             padding: 15px;
             background: var(--white);
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border: 2px solid #ced4da;
+            border-radius: 8px;
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
-            color: var(--dark);
+            text-align: center;
         }
-
-        body.dark-mode .quiz-option {
-            background: var(--dark-mode-card);
-            color: var(--dark-mode-text);
-            border-color: #444;
-        }
-
-        .quiz-option:hover {
-            background: var(--primary);
+        .quiz-option:hover, .quiz-option.selected {
+            background: var(--primary-green);
             color: var(--white);
-            border-color: var(--primary);
+            border-color: var(--primary-green);
         }
-
-        .quiz-option.selected {
-            background: var(--primary);
-            color: var(--white);
-            border-color: var(--primary);
-        }
-
-        #quizResult {
+        #costResult, #quizResult {
             text-align: center;
             padding: 20px;
-            background: rgba(46, 139, 87, 0.1);
-            border-radius: 10px;
+            background: var(--light-green);
+            border-radius: 8px;
             margin-top: 20px;
             display: none;
+            border: 1px solid var(--primary-green);
         }
 
-        /* How It Works Section */
-        #how-it-works {
-            padding: 100px 0;
+        /* General Cards */
+        .step-card, .why-card, .testimonial-card, .journey-card, .support-card, .country-card, .help-card, .treatment-card {
             background: var(--white);
-        }
-
-        body.dark-mode #how-it-works {
-            background: var(--dark-mode-bg);
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .step-card {
-            background: var(--light);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: var(--shadow);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
-            position: relative;
-            border: 1px solid #e0e0e0;
+            border: 1px solid var(--border-color);
             opacity: 0;
             transform: translateY(20px);
         }
-
-        body.dark-mode .step-card {
-            background: var(--dark-mode-card);
-        }
-
-        .step-card.show {
+        .step-card.show, .why-card.show, .testimonial-card.show, .journey-card.show, .support-card.show, .country-card.show, .help-card.show, .treatment-card.show {
             opacity: 1;
             transform: translateY(0);
         }
+        .step-card:hover, .why-card:hover, .testimonial-card:hover, .journey-card:hover, .support-card:hover, .country-card:hover, .help-card:hover, .treatment-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-green);
+        }
 
+        .step-card i, .why-card i, .support-card i, .journey-card i, .help-card i, .treatment-card i {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+        .step-card h3, .why-card h3, .support-card h3, .journey-card h3, .help-card h3, .treatment-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        .step-card p, .why-card p, .support-card p, .journey-card p, .help-card p, .treatment-card p {
+            color: var(--light-text);
+            line-height: 1.6;
+        }
+
+        .step-card {
+            position: relative;
+            text-align: center;
+        }
         .step-card::before {
             content: attr(data-step);
             position: absolute;
             top: -20px;
             left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            background: var(--primary);
+            transform: translateX(-50%);
+            background: var(--primary-green);
             color: var(--white);
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: 700;
-            font-size: 1.5rem;
-            box-shadow: var(--shadow);
-            z-index: 1;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 168, 107, 0.3);
         }
 
-        .step-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-card i {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin: 20px 0;
-        }
-
-        .step-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .step-card h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .step-card p {
-            color: #6c757d;
-            line-height: 1.7;
-        }
-
-        body.dark-mode .step-card p {
-            color: #adb5bd;
-        }
-
-        /* What We Help With Section */
-        #what-we-help-with {
-            padding: 80px 0;
-            background: var(--light);
-        }
-
-        body.dark-mode #what-we-help-with {
-            background: var(--dark-mode-card);
-        }
-
-        .help-grid {
+        /* Grids */
+        .steps-grid, .why-grid, .support-grid, .treatment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            gap: 30px;
+        }
+        .journey-grid, .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
         }
 
-        .help-card {
-            background: var(--white);
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid #e0e0e0;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        body.dark-mode .help-card {
-            background: var(--dark-mode-card);
-        }
-
-        .help-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .help-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .help-card i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 15px;
-        }
-
-        .help-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .help-card h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .help-card p {
-            font-size: 0.95rem;
-            color: #6c757d;
-            line-height: 1.6;
-        }
-
-        body.dark-mode .help-card p {
-            color: #adb5bd;
-        }
-
-        /* Why Medical Tourism Section */
-        #why-medical-tourism {
-            padding: 80px 0;
+        /* Medical Tourism & Countries */
+        #why-medical-tourism, #countries, #hospitals, #treatments {
+            padding: 100px 0;
             background: var(--white);
         }
-
-        body.dark-mode #why-medical-tourism {
-            background: var(--dark-mode-bg);
+        #why-choose-us, #patient-support, #patient-journey {
+            padding: 100px 0;
+            background: var(--bg-light);
         }
 
-        .medical-tourism-content {
+        .medical-tourism-content, .hospitals-content {
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
         }
-
-        .medical-tourism-content h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .medical-tourism-content h2 {
-            color: var(--dark-mode-text);
-        }
-
-        .medical-tourism-content p {
-            font-size: 1.1rem;
-            color: #6c757d;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-
-        body.dark-mode .medical-tourism-content p {
-            color: #adb5bd;
-        }
-
         .medical-tourism-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            gap: 15px;
+            margin-top: 30px;
         }
-
         .medical-tourism-item {
             display: flex;
             align-items: center;
             gap: 15px;
-            padding: 15px 20px;
-            background: var(--light);
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        body.dark-mode .medical-tourism-item {
-            background: var(--dark-mode-card);
-        }
-
-        .medical-tourism-item.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .medical-tourism-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .medical-tourism-item i {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-
-        .medical-tourism-item p {
-            font-size: 0.95rem;
-            color: var(--dark);
-            font-weight: 500;
-        }
-
-        body.dark-mode .medical-tourism-item p {
-            color: var(--dark-mode-text);
-        }
-
-        /* Why Choose Us Section */
-        #why-choose-us {
-            padding: 100px 0;
-            background: var(--light);
-        }
-
-        body.dark-mode #why-choose-us {
-            background: var(--dark-mode-card);
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .why-card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid #e0e0e0;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        body.dark-mode .why-card {
-            background: var(--dark-mode-card);
-        }
-
-        .why-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .why-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .why-card i {
-            font-size: 3rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .why-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .why-card h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .why-card p {
-            color: #6c757d;
-            line-height: 1.7;
-        }
-
-        body.dark-mode .why-card p {
-            color: #adb5bd;
-        }
-
-        /* Patient Support Services Section */
-        #patient-support {
-            padding: 100px 0;
-            background: var(--white);
-        }
-
-        body.dark-mode #patient-support {
-            background: var(--dark-mode-bg);
-        }
-
-        .support-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .support-card {
-            background: var(--light);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid #e0e0e0;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        body.dark-mode .support-card {
-            background: var(--dark-mode-card);
-        }
-
-        .support-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .support-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .support-card i {
-            font-size: 3.5rem;
-            color: var(--primary);
-            margin: 20px 0;
-        }
-
-        .support-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .support-card h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .support-card p {
-            color: #6c757d;
-            line-height: 1.7;
-        }
-
-        body.dark-mode .support-card p {
-            color: #adb5bd;
-        }
-
-        /* Countries Section */
-        #countries {
-            padding: 80px 0;
-            background: var(--light);
-        }
-
-        body.dark-mode #countries {
-            background: var(--dark-mode-card);
-        }
-
-        .countries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-        }
-
-        .country-card {
-            background: var(--white);
-            padding: 30px 20px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid #e0e0e0;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        body.dark-mode .country-card {
-            background: var(--dark-mode-card);
-        }
-
-        .country-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .country-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .country-card .flag {
-            font-size: 4rem;
-            margin-bottom: 15px;
-        }
-
-        .country-card h4 {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 10px;
-        }
-
-        body.dark-mode .country-card h4 {
-            color: var(--dark-mode-text);
-        }
-
-        .country-card p {
-            font-size: 0.9rem;
-            color: #6c757d;
-        }
-
-        body.dark-mode .country-card p {
-            color: #adb5bd;
-        }
-
-        /* Testimonials Section */
-        #testimonials {
-            padding: 100px 0;
-            background: var(--white);
-        }
-
-        body.dark-mode #testimonials {
-            background: var(--dark-mode-bg);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: var(--light);
-            padding: 35px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            position: relative;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        body.dark-mode .testimonial-card {
-            background: var(--dark-mode-card);
-        }
-
-        .testimonial-card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .testimonial-card::before {
-            content: '\201C';
-            position: absolute;
-            top: 20px;
-            left: 25px;
-            font-size: 5rem;
-            color: #f0f0f0;
-            line-height: 1;
-            z-index: 0;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .testimonial-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-content p {
-            font-style: italic;
-            margin-bottom: 25px;
-            color: var(--dark);
-            line-height: 1.8;
-            font-size: 1.1rem;
-        }
-
-        body.dark-mode .testimonial-content p {
-            color: var(--dark-mode-text);
-        }
-
-        .author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary);
-        }
-
-        .author-info h4 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 5px;
-        }
-
-        body.dark-mode .author-info h4 {
-            color: var(--dark-mode-text);
-        }
-
-        .author-info p {
-            font-size: 0.95rem;
-            color: #6c757d;
-            font-style: normal;
-        }
-
-        body.dark-mode .author-info p {
-            color: #adb5bd;
-        }
-
-        /* Hospitals Section */
-        #hospitals {
-            padding: 80px 0;
-            background: var(--white);
-        }
-
-        body.dark-mode #hospitals {
-            background: var(--dark-mode-bg);
-        }
-
-        .hospitals-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hospitals-content h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .hospitals-content h2 {
-            color: var(--dark-mode-text);
-        }
-
-        .hospitals-content p {
-            font-size: 1.1rem;
-            color: #6c757d;
-            line-height: 1.8;
-        }
-
-        body.dark-mode .hospitals-content p {
-            color: #adb5bd;
-        }
-
-        /* Contact Form Section */
-        #contact-form {
-            padding: 100px 0;
-            background: var(--light);
-        }
-
-        body.dark-mode #contact-form {
-            background: var(--dark-mode-card);
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: flex-start;
-        }
-
-        .contact-info {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
-        }
-
-        body.dark-mode .contact-info {
-            background: var(--dark-mode-card);
-        }
-
-        .contact-info h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .contact-info h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .contact-info p {
-            margin-bottom: 30px;
-            color: #6c757d;
-            line-height: 1.8;
-        }
-
-        body.dark-mode .contact-info p {
-            color: #adb5bd;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .contact-details .detail {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-
-        .contact-details .detail i {
-            font-size: 1.3rem;
-            color: var(--primary);
-            margin-top: 5px;
-        }
-
-        .contact-details .detail span {
-            color: var(--dark);
-            font-weight: 500;
-        }
-
-        body.dark-mode .contact-details .detail span {
-            color: var(--dark-mode-text);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
-            background: var(--primary);
-            border-radius: 50%;
-            color: var(--white);
-            transition: var(--transition);
-            font-size: 1.2rem;
-        }
-
-        .social-links a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-
-        .contact-form-container {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: var(--shadow);
-            border: 1px solid #e0e0e0;
-        }
-
-        body.dark-mode .contact-form-container {
-            background: var(--dark-mode-card);
-        }
-
-        .contact-form-container h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-
-        body.dark-mode .contact-form-container h3 {
-            color: var(--dark-mode-text);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        body.dark-mode .form-group label {
-            color: var(--dark-mode-text);
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
             padding: 15px;
-            border: 1px solid #ced4da;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: var(--transition);
-            font-family: 'Poppins', sans-serif;
             background: var(--white);
-        }
-
-        body.dark-mode .form-group input,
-        body.dark-mode .form-group select,
-        body.dark-mode .form-group textarea {
-            background: var(--dark-mode-card);
-            color: var(--dark-mode-text);
-            border-color: #444;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--primary);
-            outline: none;
-            box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 140px;
-            resize: vertical;
-        }
-
-        /* CTA Section */
-        #cta {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: var(--white);
-            text-align: center;
-        }
-
-        #cta h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        #cta p {
-            font-size: 1.3rem;
-            max-width: 700px;
-            margin: 0 auto 40px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Floating CTA */
-        .floating-cta {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: var(--secondary);
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: 50px;
-            box-shadow: var(--shadow);
-            z-index: 999;
-            transition: var(--transition);
-            display: none;
-        }
-
-        .floating-cta:hover {
-            background: #2A80B8;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .floating-cta {
-                display: block;
-                bottom: 100px;
-                right: 20px;
-                font-size: 0.9rem;
-                padding: 10px 15px;
-            }
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: var(--white);
-            padding: 60px 0 30px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 50px;
-        }
-
-        .footer-logo {
-            margin-bottom: 20px;
-        }
-
-        .footer-logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .footer-logo h1 span:first-child {
-            color: var(--primary);
-        }
-
-        .footer-logo h1 span:last-child {
-            color: var(--secondary);
-        }
-
-        .footer-about p {
-            margin-bottom: 20px;
-            color: #adb5bd;
-            line-height: 1.8;
-        }
-
-        .footer-links h3 {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 15px;
-            color: var(--white);
-        }
-
-        .footer-links h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background: var(--primary);
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-links ul {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-links a {
-            color: #adb5bd;
-            transition: var(--transition);
-            font-size: 0.95rem;
-        }
-
-        .footer-links a:hover {
-            color: var(--primary);
-            padding-left: 8px;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: #adb5bd;
-            font-size: 0.95rem;
-        }
-
-        .copyright i {
-            color: #ff4444;
-        }
-
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 65px;
-            height: 65px;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--whatsapp-green);
-            color: var(--white);
-            border-radius: 50%;
-            text-align: center;
-            font-size: 2.2rem;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
             transition: var(--transition);
         }
-
-        .whatsapp-float:hover {
-            transform: scale(1.15);
-            background-color: #1DA852;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        .medical-tourism-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-sm);
+            border-color: var(--primary-green);
+        }
+        .medical-tourism-item i {
+            color: var(--primary-green);
         }
 
-        /* Dark Mode Toggle */
-        .dark-mode-toggle {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: var(--primary);
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: 50px;
-            box-shadow: var(--shadow);
-            z-index: 999;
-            transition: var(--transition);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .dark-mode-toggle:hover {
-            background: #257245;
-            transform: translateY(-2px);
-        }
-
-        @media (max-width: 768px) {
-            .dark-mode-toggle {
-                bottom: 160px;
-                right: 20px;
-                padding: 10px 15px;
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Particles.js Container */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            pointer-events: none;
-        }
-
-        /* Country Flags Circle */
+        /* Flags */
         .countries-flags {
             display: flex;
             justify-content: center;
-            align-items: center;
             gap: 20px;
             flex-wrap: wrap;
             margin: 40px 0;
         }
-
         .flag-circle {
             width: 80px;
             height: 80px;
@@ -1901,45 +654,258 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
             background: var(--white);
-            box-shadow: var(--shadow);
+            border: 2px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
             transition: var(--transition);
         }
-
-        body.dark-mode .flag-circle {
-            background: var(--dark-mode-card);
-        }
-
         .flag-circle:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-green);
+            color: var(--primary-green);
+            box-shadow: var(--shadow-md);
+        }
+
+        .countries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+        .country-card {
+            text-align: center;
+            transition: var(--transition);
+        }
+        .country-card:hover {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+        }
+        .country-card:hover h4, .country-card:hover p {
+            color: var(--white);
+        }
+        .country-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--dark-green);
+        }
+        .country-card p {
+            color: var(--light-text);
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: #e8f4f8;
+            line-height: 1;
+            z-index: 0;
+        }
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-content p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--light-text);
+        }
+        .author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .author img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--primary-green);
+        }
+        .author-info h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-style: normal;
+        }
+
+        /* Contact */
+        #contact-form {
+            padding: 100px 0;
+            background: var(--bg-light);
+        }
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .contact-info, .contact-form-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+        .contact-info h3, .contact-form-container h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .contact-details .detail {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .contact-details .detail i {
+            font-size: 1.2rem;
+            color: var(--primary-green);
+            width: 20px;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-green);
+            transition: var(--transition);
+        }
+        .social-links a:hover {
+            background: var(--primary-green);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* CTA & Footer */
+        #cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: var(--white);
+            text-align: center;
+        }
+        #cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        #cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: var(--bg-dark);
+            color: #adb5bd;
+            padding: 60px 0 30px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-logo h1 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .footer-about p {
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .footer-links h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .footer-links a:hover {
+            color: var(--primary-green);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Floating Buttons */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Dark Mode Toggle */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1000;
+        }
+        .dark-mode-toggle button {
+            background: var(--bg-dark);
+            color: var(--white);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+        .dark-mode-toggle button:hover {
+            background: var(--text-dark);
         }
 
         /* Responsive */
-        @media (max-width: 1200px) {
-            .hero-content h1 {
-                font-size: 3.5rem;
-            }
-        }
-
         @media (max-width: 992px) {
-            .about-grid,
-            .contact-grid {
+            .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-img,
-            .contact-info {
-                order: -1;
-            }
-
-            .hero-content {
-                max-width: 100%;
             }
         }
-
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
@@ -1953,154 +919,68 @@
                 justify-content: center;
                 gap: 25px;
                 transition: var(--transition);
-                box-shadow: var(--shadow);
-                padding: 20px 0;
-                overflow-y: auto;
             }
-
-            body.dark-mode .nav-links {
-                background: var(--dark-mode-card);
-            }
-
             .nav-links.active {
                 left: 0;
             }
-
             .mobile-menu-btn {
                 display: block;
             }
-
             .hero-content h1 {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
             }
-
-            .hero-content p {
-                font-size: 1.1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                font-size: 1.8rem;
-            }
-
-            body.nav-open {
-                overflow: hidden;
-            }
-
             .success-counter {
                 flex-direction: column;
                 gap: 20px;
                 margin-top: 20px;
             }
-        }
-
-        @media (max-width: 576px) {
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-
             .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .section-title p {
-                font-size: 1rem;
-            }
-
-            .step-card::before {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-
-            .testimonials-grid,
-            .partners-grid,
-            .why-grid,
-            .trust-grid,
-            .countries-grid,
-            .help-grid,
-            .support-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .floating-cta {
-                bottom: 90px;
-                right: 15px;
-                font-size: 0.85rem;
-                padding: 8px 12px;
-            }
-
-            .dark-mode-toggle {
-                bottom: 140px;
-            }
-
-            .flag-circle {
-                width: 60px;
-                height: 60px;
                 font-size: 2rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Particles.js Background -->
-    <div id="particles-js"></div>
-
-    <!-- Header -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">
-                    <h1><span>Cross</span><span>Health</span><span>Connect</span></h1>
+                    <h1><span class="logo-cross">Cross</span><span class="logo-health">Health</span><span class="logo-connect">Connect</span></h1>
                 </a>
                 <div class="nav-links">
                     <a href="#hero">Home</a>
                     <a href="#about">About Us</a>
                     <a href="#founder">Founder</a>
                     <a href="#how-it-works">How It Works</a>
-                    <a href="#what-we-help-with">Treatments</a>
+                    <a href="#treatments">Treatments</a>
                     <a href="#cost-calculator">Cost Calculator</a>
                     <a href="#treatment-quiz">Treatment Quiz</a>
                     <a href="#patient-journey">Patient Journey</a>
                     <a href="#testimonials">Testimonials</a>
                     <a href="#contact-form">Contact</a>
                 </div>
-                <div class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
+                <div class="mobile-menu-btn"><i class="fas fa-bars"></i></div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1><span>Cross</span><span>Health</span><span>Connect</span></h1>
-                <p>Connecting Africans to world-class healthcare globally. Your trusted partner for seamless medical travel and treatment abroad.</p>
+                <h1>Your Bridge to World-Class Healthcare</h1>
+                <p>Connecting Africans to top-tier hospitals in India, Turkey, UAE, Thailand, Germany, and the UK. Seamless, compassionate, and expertly coordinated.</p>
                 <div class="hero-buttons">
-                    <a href="#how-it-works" class="btn btn-primary">How It Works</a>
-                    <a href="#contact-form" class="btn btn-outline">Request Consultation</a>
+                    <a href="#contact-form" class="btn btn-green">Get Free Consultation</a>
+                    <a href="#how-it-works" class="btn btn-outline">How It Works</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Counter -->
     <div class="success-counter">
         <div class="counter-item">
             <i class="fas fa-users"></i>
@@ -2119,12 +999,11 @@
         </div>
     </div>
 
-    <!-- Trust Banner -->
     <section id="trust-banner">
         <div class="container">
             <div class="trust-banner-grid">
                 <div class="trust-banner-item">
-                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-shield-alt"></i>
                     <p>Confidential Medical Records</p>
                 </div>
                 <div class="trust-banner-item">
@@ -2132,11 +1011,11 @@
                     <p>Verified International Hospitals</p>
                 </div>
                 <div class="trust-banner-item">
-                    <i class="fas fa-user-cog"></i>
+                    <i class="fas fa-user-md"></i>
                     <p>Personalized Care Coordination</p>
                 </div>
                 <div class="trust-banner-item">
-                    <i class="fas fa-transparency"></i>
+                    <i class="fas fa-hand-holding-medical"></i>
                     <p>Transparent Treatment Guidance</p>
                 </div>
                 <div class="trust-banner-item">
@@ -2147,7 +1026,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about">
         <div class="container">
             <div class="section-title">
@@ -2167,7 +1045,6 @@
         </div>
     </section>
 
-    <!-- Founder Section -->
     <section id="founder">
         <div class="container">
             <div class="section-title">
@@ -2181,45 +1058,36 @@
                 <div class="founder-text">
                     <p>CrossHealthConnect was born from a simple realization: too many African patients know they need specialized treatment but don't know where to start.</p>
                     <p>While speaking with families seeking medical care abroad, I noticed the same challenge over and over again. Patients and their loved ones often struggled to find trusted hospitals, understand treatment options, estimate costs, and navigate the travel process.</p>
-                    <p>I founded CrossHealthConnect to help bridge that gap.</p>
-                    <p>Our mission is to make access to international healthcare simpler, more transparent, and more accessible for Africans seeking specialized medical treatment abroad. We connect patients with trusted hospitals, provide guidance throughout the process, and help families make informed healthcare decisions with confidence.</p>
+                    <p>I founded CrossHealthConnect to help bridge that gap. Our mission is to make access to international healthcare simpler, more transparent, and more accessible for Africans seeking specialized medical treatment abroad. We connect patients with trusted hospitals, provide guidance throughout the process, and help families make informed healthcare decisions with confidence.</p>
                     <p>We believe that quality healthcare should not be limited by location. Every patient deserves access to the best possible care and the support needed to reach it.</p>
                     <p>Today, CrossHealthConnect is working to make that vision a reality by helping patients explore treatment opportunities across leading healthcare destinations around the world.</p>
                     <div class="founder-signature">
-                        <strong>Emmanuel Maeke Kioko</strong><br>
-                        Founder, CrossHealthConnect
+                        Emmanuel Maeke Kioko<br>
+                        <span style="font-weight: 400; font-size: 0.9rem; color: var(--light-text);">Founder, CrossHealthConnect</span>
                     </div>
-                    <div class="play-story-btn">
-                        <button id="playStoryBtn" class="btn btn-primary">
-                            <i class="fas fa-play-circle"></i> Hear My Story
-                        </button>
-                        <audio id="founderAudio" src="audio/founder-story.mp3" preload="auto"></audio>
-                    </div>
+                    <button id="playStoryBtn" class="btn btn-primary" style="margin-top: 20px;">
+                        <i class="fas fa-play-circle"></i> Hear My Story
+                    </button>
+                    <audio id="founderAudio" src="audio/founder-story.mp3" preload="auto"></audio>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Before & After Slider -->
     <section id="before-after">
         <div class="container">
             <div class="section-title">
                 <h2>Before & After</h2>
                 <p>See the transformative power of global healthcare</p>
             </div>
-            <div class="slider-container">
-                <div class="before-after-slider">
-                    <div class="slider-images">
-                        <img src="images/before-orthopedic.jpg" class="before" alt="Before Treatment" loading="lazy">
-                        <img src="images/after-orthopedic.jpg" class="after" alt="After Treatment" loading="lazy">
-                    </div>
-                    <input type="range" min="0" max="100" value="50" class="slider" id="beforeAfterSlider">
-                </div>
+            <div class="before-after-slider">
+                <img src="images/before-orthopedic.jpg" class="before" alt="Before Treatment" loading="lazy">
+                <img src="images/after-orthopedic.jpg" class="after" alt="After Treatment" loading="lazy">
+                <input type="range" min="0" max="100" value="50" class="slider" id="beforeAfterSlider">
             </div>
         </div>
     </section>
 
-    <!-- Cost Calculator -->
     <section id="cost-calculator">
         <div class="container">
             <div class="section-title">
@@ -2227,31 +1095,29 @@
                 <p>Compare treatment costs across top global healthcare destinations</p>
             </div>
             <div class="calculator-container">
-                <div class="calculator-form">
-                    <div class="form-group">
-                        <label for="conditionSelect">Medical Condition</label>
-                        <select id="conditionSelect">
-                            <option value="" disabled selected>Select condition</option>
-                            <option value="Heart Surgery">Heart Surgery</option>
-                            <option value="Kidney Transplant">Kidney Transplant</option>
-                            <option value="Cancer Treatment">Cancer Treatment</option>
-                            <option value="Orthopedic Surgery">Orthopedic Surgery</option>
-                            <option value="IVF">IVF/Fertility Treatment</option>
-                            <option value="Neurology">Neurology</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="countrySelect">Preferred Country</label>
-                        <select id="countrySelect">
-                            <option value="" disabled selected>Select country</option>
-                            <option value="India">🇮🇳 India</option>
-                            <option value="Turkey">🇹🇷 Turkey</option>
-                            <option value="UAE">🇦🇪 UAE</option>
-                            <option value="Thailand">🇹🇭 Thailand</option>
-                            <option value="Germany">🇩🇪 Germany</option>
-                            <option value="UK">🇬🇧 United Kingdom</option>
-                        </select>
-                    </div>
+                <div class="form-group">
+                    <label>Medical Condition</label>
+                    <select id="conditionSelect">
+                        <option value="" disabled selected>Select condition</option>
+                        <option value="Heart Surgery">Heart Surgery</option>
+                        <option value="Kidney Transplant">Kidney Transplant</option>
+                        <option value="Cancer Treatment">Cancer Treatment</option>
+                        <option value="Orthopedic Surgery">Orthopedic Surgery</option>
+                        <option value="Neurological Surgery">Neurological Surgery</option>
+                        <option value="Fertility Treatment">Fertility Treatment</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Country</label>
+                    <select id="countrySelect">
+                        <option value="" disabled selected>Select country</option>
+                        <option value="India">India</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="UAE">UAE</option>
+                        <option value="Thailand">Thailand</option>
+                        <option value="Germany">Germany</option>
+                        <option value="UK">United Kingdom</option>
+                    </select>
                 </div>
                 <button id="calculateBtn" class="btn btn-primary">Calculate Cost</button>
                 <div id="costResult"></div>
@@ -2259,7 +1125,6 @@
         </div>
     </section>
 
-    <!-- Treatment Quiz -->
     <section id="treatment-quiz">
         <div class="container">
             <div class="section-title">
@@ -2267,27 +1132,29 @@
                 <p>Take this quick quiz to discover the best country for your medical needs</p>
             </div>
             <div class="quiz-container">
-                <div class="quiz-question" id="quizQuestion">
-                    <p>What is your budget?</p>
+                <div class="form-group">
+                    <label>What is your budget?</label>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-value="Under $5,000">Under $5,000</div>
+                        <div class="quiz-option" data-value="$5,000 - $15,000">$5,000 - $15,000</div>
+                        <div class="quiz-option" data-value="Over $15,000">Over $15,000</div>
+                    </div>
                 </div>
-                <div class="quiz-options" id="quizOptions">
-                    <!-- Options will be dynamically added here -->
-                </div>
+                <button id="quizBtn" class="btn btn-green">Get Recommendation</button>
                 <div id="quizResult"></div>
             </div>
         </div>
     </section>
 
-    <!-- Patient Journey Highlights -->
     <section id="patient-journey">
         <div class="container">
             <div class="section-title">
                 <h2>Patient Journey Highlights</h2>
-                <p>Examples of how we help patients access international healthcare opportunities and make informed treatment decisions.</p>
+                <p>Examples of how we help patients access international healthcare opportunities and make informed treatment decisions</p>
             </div>
             <div class="journey-grid">
                 <div class="journey-card">
-                    <i class="fas fa-user-injured"></i>
+                    <i class="fas fa-heart"></i>
                     <h3>Heart Surgery in India</h3>
                     <p>A patient from Nairobi received life-saving heart surgery in India at a fraction of the local cost. We handled all logistics, from hospital selection to post-surgery follow-up.</p>
                 </div>
@@ -2297,7 +1164,7 @@
                     <p>A Kenyan family struggled to find a compatible donor locally. We connected them with a top hospital in Turkey, where the patient received a successful kidney transplant.</p>
                 </div>
                 <div class="journey-card">
-                    <i class="fas fa-female"></i>
+                    <i class="fas fa-microscope"></i>
                     <h3>Cancer Treatment in UAE</h3>
                     <p>A patient from Uganda accessed cutting-edge cancer treatment in the UAE. Our team ensured seamless coordination, including visa assistance and accommodation.</p>
                 </div>
@@ -2305,7 +1172,6 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
     <section id="how-it-works">
         <div class="container">
             <div class="section-title">
@@ -2337,41 +1203,40 @@
         </div>
     </section>
 
-    <!-- What We Help With Section -->
-    <section id="what-we-help-with">
+    <section id="treatments">
         <div class="container">
             <div class="section-title">
                 <h2>What We Help With</h2>
                 <p>Specialized medical treatments we facilitate</p>
             </div>
-            <div class="help-grid">
-                <div class="help-card">
-                    <i class="fas fa-heart"></i>
+            <div class="treatment-grid">
+                <div class="treatment-card">
+                    <i class="fas fa-heartbeat"></i>
                     <h3>Cardiology</h3>
                     <p>Heart surgeries, angioplasty, and advanced cardiac care</p>
                 </div>
-                <div class="help-card">
+                <div class="treatment-card">
                     <i class="fas fa-dna"></i>
                     <h3>Oncology</h3>
                     <p>Cancer diagnosis, treatment, and comprehensive care</p>
                 </div>
-                <div class="help-card">
+                <div class="treatment-card">
                     <i class="fas fa-bone"></i>
                     <h3>Orthopedics</h3>
                     <p>Joint replacement, spine surgery, and bone treatment</p>
                 </div>
-                <div class="help-card">
+                <div class="treatment-card">
                     <i class="fas fa-brain"></i>
                     <h3>Neurology</h3>
                     <p>Brain surgery, stroke treatment, and nervous system care</p>
                 </div>
-                <div class="help-card">
+                <div class="treatment-card">
                     <i class="fas fa-baby"></i>
                     <h3>Fertility Treatment</h3>
                     <p>IVF, reproductive care, and family planning</p>
                 </div>
-                <div class="help-card">
-                    <i class="fas fa-tint"></i>
+                <div class="treatment-card">
+                    <i class="fas fa-kidneys"></i>
                     <h3>Kidney Care</h3>
                     <p>Transplants, dialysis, and kidney disease treatment</p>
                 </div>
@@ -2379,39 +1244,37 @@
         </div>
     </section>
 
-    <!-- Why Medical Tourism Section -->
     <section id="why-medical-tourism">
         <div class="container">
-            <div class="medical-tourism-content">
+            <div class="section-title">
                 <h2>Why Medical Tourism?</h2>
-                <p>Many patients travel abroad to access specialized treatment, shorter waiting times, advanced medical technology, and expert healthcare professionals. CrossHealthConnect helps patients explore trusted international healthcare options while providing guidance throughout the entire journey.</p>
-                <div class="medical-tourism-grid">
-                    <div class="medical-tourism-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Access to World-Class Specialists</p>
-                    </div>
-                    <div class="medical-tourism-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Shorter Waiting Times</p>
-                    </div>
-                    <div class="medical-tourism-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Advanced Medical Technology</p>
-                    </div>
-                    <div class="medical-tourism-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Cost-Effective Treatment Options</p>
-                    </div>
-                    <div class="medical-tourism-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Comprehensive Care Packages</p>
-                    </div>
+                <p>Many patients travel abroad to access specialized treatment, shorter waiting times, advanced medical technology, and expert healthcare professionals.</p>
+            </div>
+            <div class="medical-tourism-grid">
+                <div class="medical-tourism-item">
+                    <i class="fas fa-user-md"></i>
+                    <p>Access to World-Class Specialists</p>
+                </div>
+                <div class="medical-tourism-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Shorter Waiting Times</p>
+                </div>
+                <div class="medical-tourism-item">
+                    <i class="fas fa-microscope"></i>
+                    <p>Advanced Medical Technology</p>
+                </div>
+                <div class="medical-tourism-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <p>Cost-Effective Treatment Options</p>
+                </div>
+                <div class="medical-tourism-item">
+                    <i class="fas fa-suitcase"></i>
+                    <p>Comprehensive Care Packages</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
     <section id="why-choose-us">
         <div class="container">
             <div class="section-title">
@@ -2420,7 +1283,7 @@
             </div>
             <div class="why-grid">
                 <div class="why-card">
-                    <i class="fas fa-route"></i>
+                    <i class="fas fa-compass"></i>
                     <h3>End-to-End Guidance</h3>
                     <p>From diagnosis to recovery, we guide you through every step of your medical journey, ensuring you never feel alone.</p>
                 </div>
@@ -2435,7 +1298,7 @@
                     <p>We handle visa processing, flight bookings, and local transportation, so you can focus on your health.</p>
                 </div>
                 <div class="why-card">
-                    <i class="fas fa-user-cog"></i>
+                    <i class="fas fa-user-friends"></i>
                     <h3>Dedicated Care Coordinator</h3>
                     <p>Every patient receives personalized guidance throughout their healthcare journey, from hospital selection and travel planning to treatment and recovery support.</p>
                 </div>
@@ -2443,7 +1306,6 @@
         </div>
     </section>
 
-    <!-- Patient Support Services Section -->
     <section id="patient-support">
         <div class="container">
             <div class="section-title">
@@ -2452,7 +1314,7 @@
             </div>
             <div class="support-grid">
                 <div class="support-card">
-                    <i class="fas fa-user-friends"></i>
+                    <i class="fas fa-user-nurse"></i>
                     <h3>Dedicated Patient Companion</h3>
                     <p>For patients travelling alone, we help coordinate trusted caregivers and support personnel who can assist during hospital visits, accommodation stays, and recovery periods.</p>
                 </div>
@@ -2480,7 +1342,6 @@
         </div>
     </section>
 
-    <!-- Countries Section -->
     <section id="countries">
         <div class="container">
             <div class="section-title">
@@ -2521,23 +1382,19 @@
                     <p>World-Renowned Healthcare System</p>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 40px; color: #6c757d; font-size: 1.1rem;">
-                <i class="fas fa-globe"></i> Serving patients from all African countries
-            </p>
+            <p style="text-align: center; margin-top: 30px; color: var(--light-text);">Serving patients from all African countries</p>
         </div>
     </section>
 
-    <!-- Hospitals Section -->
     <section id="hospitals">
         <div class="container">
-            <div class="hospitals-content">
+            <div class="section-title">
                 <h2>Hospital Collaborations</h2>
                 <p>We are in collaboration with the best hospitals in our network countries to provide you with world-class medical care. Our team is continuously working to establish partnerships with top healthcare providers to ensure you receive the best possible treatment.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
             <div class="section-title">
@@ -2549,9 +1406,9 @@
                     <div class="testimonial-content">
                         <p>CrossHealthConnect made it possible for my father to receive life-saving heart surgery in India. The entire process, from initial consultation to post-surgery follow-up, was seamless. We couldn't have asked for better support during such a difficult time.</p>
                         <div class="author">
-                            <img src="images/patient1.jpg" alt="Heart Surgery Patient from Nairobi" loading="lazy">
+                            <img src="images/patient1.jpg" alt="Patient" loading="lazy">
                             <div class="author-info">
-                                <h4>Heart Surgery Patient</h4>
+                                <h4>Heart Surgery Patient from Nairobi</h4>
                                 <p>Nairobi, Kenya</p>
                             </div>
                         </div>
@@ -2561,9 +1418,9 @@
                     <div class="testimonial-content">
                         <p>I was diagnosed with a complex condition and needed specialized treatment that wasn't available in Kenya. CrossHealthConnect connected me with a top oncologist in Turkey. They handled all the logistics, including my visa and accommodation. Today, I'm on the path to recovery, thanks to their exceptional service.</p>
                         <div class="author">
-                            <img src="images/patient2.jpg" alt="Cancer Treatment Patient from Kampala" loading="lazy">
+                            <img src="images/patient2.jpg" alt="Patient" loading="lazy">
                             <div class="author-info">
-                                <h4>Cancer Treatment Patient</h4>
+                                <h4>Cancer Treatment Patient from Kampala</h4>
                                 <p>Kampala, Uganda</p>
                             </div>
                         </div>
@@ -2573,9 +1430,9 @@
                     <div class="testimonial-content">
                         <p>As a mother, my biggest fear was not being able to afford quality healthcare for my child. CrossHealthConnect not only found us an affordable option in Thailand but also ensured we felt supported every step of the way. My daughter is now healthy and thriving, and I'm forever grateful.</p>
                         <div class="author">
-                            <img src="images/patient3.jpg" alt="Orthopedic Patient from Dar es Salaam" loading="lazy">
+                            <img src="images/patient3.jpg" alt="Patient" loading="lazy">
                             <div class="author-info">
-                                <h4>Orthopedic Patient</h4>
+                                <h4>Orthopedic Patient from Dar es Salaam</h4>
                                 <p>Dar es Salaam, Tanzania</p>
                             </div>
                         </div>
@@ -2585,7 +1442,6 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
     <section id="contact-form">
         <div class="container">
             <div class="section-title">
@@ -2595,7 +1451,7 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Get in Touch</h3>
-                    <p>Whether you're seeking treatment, a second opinion, or simply exploring your options, we're here to assist you every step of the way.</p>
+                    <p style="color: var(--light-text); margin-bottom: 30px;">Whether you're seeking treatment, a second opinion, or simply exploring your options, we're here to assist you every step of the way.</p>
                     <div class="contact-details">
                         <div class="detail">
                             <i class="fas fa-phone"></i>
@@ -2615,671 +1471,314 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="https://instagram.com/crosshealthconnect" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/crosshealthconnect" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://tiktok.com/@crosshealthconnect" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://twitter.com/crosshealthconnect" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com/crosshealthconnect" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/crosshealthconnect" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://tiktok.com/@crosshealthconnect" target="_blank">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://twitter.com/crosshealthconnect" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="contact-form-container">
                     <h3>Request Medical Assistance</h3>
-                    <form id="leadForm" action="https://formspree.io/f/mleznjgo" method="POST">
+                    <form id="leadForm">
                         <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <label>Full Name</label>
+                            <input type="text" id="name" placeholder="Enter your full name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <label>Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone (WhatsApp)</label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <label>Phone (WhatsApp)</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number" required>
                         </div>
                         <div class="form-group">
-                            <label for="country">Your Country</label>
-                            <select id="country" name="country" required>
+                            <label>Your Country</label>
+                            <select id="country" required>
                                 <option value="" disabled selected>Select your country</option>
-                                <option value="Kenya">Kenya</option>
-                                <option value="Uganda">Uganda</option>
-                                <option value="Tanzania">Tanzania</option>
-                                <option value="Rwanda">Rwanda</option>
-                                <option value="Ethiopia">Ethiopia</option>
-                                <option value="Somalia">Somalia</option>
-                                <option value="South Sudan">South Sudan</option>
-                                <option value="Nigeria">Nigeria</option>
-                                <option value="Ghana">Ghana</option>
-                                <option value="Other">Other</option>
+                                <option>Kenya</option>
+                                <option>Uganda</option>
+                                <option>Tanzania</option>
+                                <option>Rwanda</option>
+                                <option>Nigeria</option>
+                                <option>Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="condition">Medical Condition</label>
-                            <select id="condition" name="condition" required>
+                            <label>Medical Condition</label>
+                            <select id="condition" required>
                                 <option value="" disabled selected>Select condition</option>
-                                <option value="Heart Disease">Heart Disease</option>
-                                <option value="Cancer">Cancer</option>
-                                <option value="Orthopedic">Orthopedic</option>
-                                <option value="Neurology">Neurology</option>
-                                <option value="Fertility">Fertility Treatment</option>
-                                <option value="Kidney Disease">Kidney Disease</option>
-                                <option value="Other">Other</option>
+                                <option>Heart Disease</option>
+                                <option>Cancer</option>
+                                <option>Orthopedic</option>
+                                <option>Neurology</option>
+                                <option>Fertility</option>
+                                <option>Kidney Care</option>
+                                <option>Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="preferred-country">Preferred Treatment Country</label>
-                            <select id="preferred-country" name="preferred-country" required>
+                            <label>Preferred Treatment Country</label>
+                            <select id="preferred-country" required>
                                 <option value="" disabled selected>Select country</option>
-                                <option value="India">India</option>
-                                <option value="Turkey">Turkey</option>
-                                <option value="UAE">UAE</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Germany">Germany</option>
-                                <option value="UK">United Kingdom</option>
+                                <option>India</option>
+                                <option>Turkey</option>
+                                <option>UAE</option>
+                                <option>Thailand</option>
+                                <option>Germany</option>
+                                <option>UK</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Describe your medical needs, concerns, or questions." required></textarea>
+                            <label>Message</label>
+                            <textarea id="message" placeholder="Describe your medical needs, concerns, or questions." required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-green" style="width: 100%;">
                             <i class="fas fa-paper-plane"></i> Send Request
                         </button>
                     </form>
-                    <div id="formMessage" style="margin-top: 20px; display: none;"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
     <section id="cta">
         <div class="container">
             <h2>Ready to Begin Your Health Journey?</h2>
             <p>Your well-being is our priority. Let's connect you to the best care, anywhere in the world. Start your journey today with CrossHealthConnect.</p>
-            <a href="#contact-form" class="btn btn-secondary">Get Started Now</a>
+            <a href="#contact-form" class="btn btn-outline" style="color: var(--white); border-color: var(--white);">Get Started Now</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="#" class="footer-logo">
-                        <h1><span>Cross</span><span>Health</span><span>Connect</span></h1>
-                    </a>
-                    <p>Bridging borders, healing lives. Your trusted partner for global healthcare access, connecting Africans to world-class medical treatment abroad.</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/crosshealthconnect" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/crosshealthconnect" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://tiktok.com/@crosshealthconnect" target="_blank"><i class="fab fa-tiktok"></i></a>
-                        <a href="https://twitter.com/crosshealthconnect" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <div class="footer-logo">
+                        <h1>
+                            <span class="logo-cross">Cross</span>
+                            <span style="color:white">Health</span>
+                            <span class="logo-connect">Connect</span>
+                        </h1>
                     </div>
+                    <p>Bridging borders, healing lives. Your trusted partner for global healthcare access, connecting Africans to world-class medical treatment abroad.</p>
                 </div>
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <ul>
-                        <a href="#hero">Home</a>
-                        <a href="#about">About Us</a>
-                        <a href="#founder">Founder</a>
-                        <a href="#how-it-works">How It Works</a>
-                        <a href="#what-we-help-with">Treatments</a>
-                        <a href="#testimonials">Testimonials</a>
-                        <a href="#contact-form">Contact</a>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#founder">Founder</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact-form">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>Services</h3>
                     <ul>
-                        <a href="#">Medical Tourism</a>
-                        <a href="#">Patient Support</a>
-                        <a href="#">Treatment Coordination</a>
-                        <a href="#">Travel Assistance</a>
-                        <a href="#">Cost Estimation</a>
-                        <a href="#">Visa Assistance</a>
+                        <li><a href="#">Medical Tourism</a></li>
+                        <li><a href="#">Patient Support</a></li>
+                        <li><a href="#">Treatment Coordination</a></li>
+                        <li><a href="#">Travel Assistance</a></li>
+                        <li><a href="#">Cost Estimation</a></li>
+                        <li><a href="#">Visa Assistance</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
                     <h3>Destinations</h3>
                     <ul>
-                        <a href="#">India</a>
-                        <a href="#">Turkey</a>
-                        <a href="#">UAE</a>
-                        <a href="#">Thailand</a>
-                        <a href="#">Germany</a>
-                        <a href="#">United Kingdom</a>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">Turkey</a></li>
+                        <li><a href="#">UAE</a></li>
+                        <li><a href="#">Thailand</a></li>
+                        <li><a href="#">Germany</a></li>
+                        <li><a href="#">United Kingdom</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2026 CrossHealthConnect. All Rights Reserved.
+                <p>&copy; 2026 CrossHealthConnect. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating CTA -->
-    <a href="#contact-form" class="floating-cta">
-        <i class="fas fa-calendar-check"></i> Book Free Consultation
-    </a>
-
-    <!-- Dark Mode Toggle -->
-    <div class="dark-mode-toggle">
-        <i class="fas fa-moon"></i>
-        <span>Dark Mode</span>
-    </div>
-
-    <!-- WhatsApp Float Button -->
     <a href="https://wa.me/254750715218" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        const body = document.body;
+        // Mobile Menu
+        document.querySelector('.mobile-menu-btn').addEventListener('click', () => 
+            document.querySelector('.nav-links').classList.toggle('active')
+        );
+        document.querySelectorAll('.nav-links a').forEach(link => 
+            link.addEventListener('click', () => 
+                document.querySelector('.nav-links').classList.remove('active')
+            )
+        );
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            body.classList.toggle('nav-open');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                body.classList.remove('nav-open');
-            });
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!e.target.closest('.navbar') && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                body.classList.remove('nav-open');
-            }
-        });
-
-        // Close mobile menu on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                body.classList.remove('nav-open');
-            }
-        });
-
-        // Header Scroll Effect
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Smooth Scrolling for Anchor Links
+        // Smooth Scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
             });
         });
 
-        // Intersection Observer for Animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
-
+        // Animations
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('show');
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-banner-item, .help-card, .support-card, .treatment-card, .journey-card').forEach(el => observer.observe(el));
 
-        // Observe all animated elements
-        const animatedElements = document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-banner-item, .help-card, .support-card, .medical-tourism-item, .journey-card');
-        animatedElements.forEach(el => observer.observe(el));
-
-        // Form Submission with Formspree
-        const leadForm = document.getElementById('leadForm');
-        const formMessage = document.getElementById('formMessage');
-
-        leadForm.addEventListener('submit', async (e) => {
+        // Form Submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const country = document.getElementById('country').value;
+            const condition = document.getElementById('condition').value;
+            const prefCountry = document.getElementById('preferred-country').value;
+            const message = document.getElementById('message').value;
 
-            const submitBtn = leadForm.querySelector('button[type="submit"]');
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitBtn.disabled = true;
+            const textBody = `*New Medical Assistance Request*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Phone:* ${phone}%0A*Country:* ${country}%0A*Condition:* ${condition}%0A*Preferred Destination:* ${prefCountry}%0A*Message:* ${message}`;
+            const waUrl = `https://wa.me/254750715218?text=${textBody}`;
+            
+            const mailBody = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nCountry: ${country}\nCondition: ${condition}\nPreferred Destination: ${prefCountry}\nMessage: ${message}`;
+            const mailtoUrl = `mailto:crosshealthconnect@gmail.com?subject=${encodeURIComponent('Medical Request from ' + name)}&body=${encodeURIComponent(mailBody)}`;
 
-            try {
-                const response = await fetch(leadForm.action, {
-                    method: 'POST',
-                    body: new FormData(leadForm),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    formMessage.style.display = 'block';
-                    formMessage.innerHTML = '<div style="color: #28A745; padding: 15px; background: #d4edda; border-radius: 8px;"><i class="fas fa-check-circle"></i> Thank you! Your request has been received. We will contact you within 24 hours.</div>';
-                    leadForm.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                formMessage.style.display = 'block';
-                formMessage.innerHTML = '<div style="color: #dc3545; padding: 15px; background: #f8d7da; border-radius: 8px;"><i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or contact us directly at +254 750 715 218.</div>';
-            } finally {
-                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Request';
-                submitBtn.disabled = false;
-            }
+            Swal.fire({
+                title: 'Request Ready!',
+                html: `Your details are prepared. Choose how to send:`,
+                showCancelButton: true,
+                showConfirmButton: false,
+                cancelButtonText: 'Cancel',
+                html: `
+                    <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
+                        <a href="${waUrl}" target="_blank" class="btn btn-green" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; border-color: #25D366;">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </a>
+                        <a href="${mailtoUrl}" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                            <i class="fas fa-envelope"></i> Send via Email
+                        </a>
+                    </div>
+                `,
+                width: '600px'
+            });
         });
 
-        // Dark Mode Toggle
-        const darkModeToggle = document.querySelector('.dark-mode-toggle');
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            const icon = darkModeToggle.querySelector('i');
-            const text = darkModeToggle.querySelector('span');
-
-            if (body.classList.contains('dark-mode')) {
-                icon.className = 'fas fa-sun';
-                text.textContent = 'Light Mode';
-                localStorage.setItem('darkMode', 'enabled');
-            } else {
-                icon.className = 'fas fa-moon';
-                text.textContent = 'Dark Mode';
-                localStorage.setItem('darkMode', 'disabled');
-            }
-        });
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            body.classList.add('dark-mode');
-            darkModeToggle.querySelector('i').className = 'fas fa-sun';
-            darkModeToggle.querySelector('span').textContent = 'Light Mode';
-        }
-
-        // Success Counter Animation
-        function animateCounter(element, target, duration = 2000) {
-            let current = 0;
-            const increment = target / (duration / 16); // 16ms per frame (60fps)
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    element.textContent = target.toLocaleString();
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                }
-            }, 16);
-        }
-
-        // Animate counters when they come into view
-        const counters = [
-            { element: document.getElementById('patientCounter'), target: 13 },
-            { element: document.getElementById('countryCounter'), target: 7 },
-            { element: document.getElementById('treatmentCounter'), target: 20 }
-        ];
-
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    counters.forEach(counter => {
-                        animateCounter(counter.element, counter.target);
-                    });
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const successCounter = document.querySelector('.success-counter');
-        if (successCounter) {
-            counterObserver.observe(successCounter);
-        }
-
-        // Cost Calculator
-        const treatmentCosts = {
-            "Heart Surgery": {
-                India: "$5,000 - $10,000",
-                Turkey: "$8,000 - $15,000",
-                UAE: "$12,000 - $20,000",
-                Thailand: "$7,000 - $12,000",
-                Germany: "$20,000 - $35,000",
-                UK: "$25,000 - $40,000"
-            },
-            "Kidney Transplant": {
-                India: "$12,000 - $18,000",
-                Turkey: "$15,000 - $25,000",
-                UAE: "$20,000 - $30,000",
-                Thailand: "$15,000 - $20,000",
-                Germany: "$30,000 - $50,000",
-                UK: "$40,000 - $60,000"
-            },
-            "Cancer Treatment": {
-                India: "$3,000 - $10,000",
-                Turkey: "$5,000 - $15,000",
-                UAE: "$8,000 - $20,000",
-                Thailand: "$4,000 - $12,000",
-                Germany: "$15,000 - $30,000",
-                UK: "$20,000 - $40,000"
-            },
-            "Orthopedic Surgery": {
-                India: "$4,000 - $8,000",
-                Turkey: "$6,000 - $12,000",
-                UAE: "$8,000 - $15,000",
-                Thailand: "$5,000 - $10,000",
-                Germany: "$12,000 - $25,000",
-                UK: "$15,000 - $30,000"
-            },
-            "IVF": {
-                India: "$3,000 - $6,000",
-                Turkey: "$4,000 - $8,000",
-                UAE: "$5,000 - $10,000",
-                Thailand: "$3,500 - $7,000",
-                Germany: "$8,000 - $15,000",
-                UK: "$10,000 - $20,000"
-            },
-            "Neurology": {
-                India: "$5,000 - $12,000",
-                Turkey: "$7,000 - $15,000",
-                UAE: "$10,000 - $20,000",
-                Thailand: "$6,000 - $12,000",
-                Germany: "$15,000 - $30,000",
-                UK: "$20,000 - $35,000"
-            }
-        };
-
-        const calculateBtn = document.getElementById('calculateBtn');
-        const conditionSelect = document.getElementById('conditionSelect');
-        const countrySelect = document.getElementById('countrySelect');
-        const costResult = document.getElementById('costResult');
-
-        calculateBtn.addEventListener('click', () => {
-            const condition = conditionSelect.value;
-            const country = countrySelect.value;
-
-            if (!condition || !country) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'Please select both a condition and a country!',
-                });
-                return;
-            }
-
-            const cost = treatmentCosts[condition][country];
-
-            costResult.style.display = 'block';
-            costResult.innerHTML = `
-                <h3>Estimated Cost for ${condition} in ${country}</h3>
-                <p style="font-size: 1.5rem; font-weight: 700; color: var(--primary);">${cost}</p>
-                <p>Note: This is an average range. Actual costs may vary based on hospital, doctor, and specific treatment requirements.</p>
-                <a href="#contact-form" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Get Exact Quote</a>
-            `;
-        });
-
-        // Treatment Quiz
-        const quizData = [
-            {
-                question: "What is your budget?",
-                options: [
-                    { text: "Under $5,000", value: "low" },
-                    { text: "$5,000 - $15,000", value: "medium" },
-                    { text: "Over $15,000", value: "high" }
-                ]
-            },
-            {
-                question: "What type of treatment are you seeking?",
-                options: [
-                    { text: "Heart/Cardiology", value: "cardiology" },
-                    { text: "Cancer/Oncology", value: "oncology" },
-                    { text: "Orthopedic/Bone", value: "orthopedic" },
-                    { text: "Fertility/IVF", value: "fertility" },
-                    { text: "Neurology/Brain", value: "neurology" },
-                    { text: "Other", value: "other" }
-                ]
-            },
-            {
-                question: "How soon do you need treatment?",
-                options: [
-                    { text: "Within 1 month", value: "urgent" },
-                    { text: "1-3 months", value: "soon" },
-                    { text: "3-6 months", value: "later" },
-                    { text: "Just exploring options", value: "exploring" }
-                ]
-            }
-        ];
-
-        const quizRecommendations = {
-            low: {
-                cardiology: { country: "India", reason: "India offers the most affordable cardiology treatments with high quality." },
-                oncology: { country: "India", reason: "India provides cost-effective cancer treatments with excellent outcomes." },
-                orthopedic: { country: "Thailand", reason: "Thailand is known for affordable orthopedic surgeries and recovery tourism." },
-                fertility: { country: "India", reason: "India is a top destination for affordable IVF and fertility treatments." },
-                neurology: { country: "Turkey", reason: "Turkey offers competitive pricing for neurology treatments." },
-                other: { country: "India", reason: "India is generally the most affordable for most treatments." }
-            },
-            medium: {
-                cardiology: { country: "Turkey", reason: "Turkey provides a great balance of quality and cost for heart treatments." },
-                oncology: { country: "Turkey", reason: "Turkey has advanced cancer treatment facilities at reasonable costs." },
-                orthopedic: { country: "Turkey", reason: "Turkey is excellent for orthopedic procedures with modern hospitals." },
-                fertility: { country: "Thailand", reason: "Thailand offers high-quality fertility treatments at medium costs." },
-                neurology: { country: "UAE", reason: "UAE provides advanced neurology treatments with luxury care." },
-                other: { country: "Turkey", reason: "Turkey is a great all-around destination for medium budgets." }
-            },
-            high: {
-                cardiology: { country: "Germany", reason: "Germany offers cutting-edge cardiology treatments with the best technology." },
-                oncology: { country: "Germany", reason: "Germany is a leader in cancer research and treatment." },
-                orthopedic: { country: "Germany", reason: "Germany has world-class orthopedic specialists and facilities." },
-                fertility: { country: "UK", reason: "The UK is renowned for its fertility treatment success rates." },
-                neurology: { country: "UK", reason: "The UK has some of the world's best neurology specialists." },
-                other: { country: "Germany", reason: "Germany provides top-tier medical care across all specialties." }
-            }
-        };
-
-        let currentQuizStep = 0;
-        let quizAnswers = {};
-
-        const quizQuestion = document.getElementById('quizQuestion');
-        const quizOptionsContainer = document.getElementById('quizOptions');
-        const quizResultContainer = document.getElementById('quizResult');
-
-        function loadQuizStep(step) {
-            if (step >= quizData.length) {
-                showQuizResult();
-                return;
-            }
-
-            const stepData = quizData[step];
-            quizQuestion.innerHTML = `<p>${stepData.question}</p>`;
-            quizOptionsContainer.innerHTML = '';
-
-            stepData.options.forEach(option => {
-                const button = document.createElement('button');
-                button.className = 'quiz-option';
-                button.textContent = option.text;
-                button.dataset.value = option.value;
-                button.addEventListener('click', () => {
-                    quizAnswers[stepData.question] = option.value;
-                    document.querySelectorAll('.quiz-option').forEach(btn => {
-                        btn.classList.remove('selected');
-                    });
-                    button.classList.add('selected');
-                    currentQuizStep++;
-                    setTimeout(() => loadQuizStep(currentQuizStep), 500);
-                });
-                quizOptionsContainer.appendChild(button);
-            });
-        }
-
-        function showQuizResult() {
-            quizQuestion.style.display = 'none';
-            quizOptionsContainer.style.display = 'none';
-
-            const budget = quizAnswers["What is your budget?"];
-            const treatment = quizAnswers["What type of treatment are you seeking?"];
-
-            const recommendation = quizRecommendations[budget][treatment] || {
-                country: "India",
-                reason: "India is a great default choice for most treatments and budgets."
-            };
-
-            quizResultContainer.style.display = 'block';
-            quizResultContainer.innerHTML = `
-                <h3>Your Recommended Destination: ${recommendation.country}</h3>
-                <p><strong>Why?</strong> ${recommendation.reason}</p>
-                <p>Based on your budget (${budget}) and treatment type (${treatment}), we recommend ${recommendation.country} for the best balance of quality and affordability.</p>
-                <a href="#contact-form" class="btn btn-primary" style="margin-top: 15px; display: inline-block;">Get Personalized Recommendation</a>
-                <button id="restartQuiz" class="btn btn-outline" style="margin-top: 15px; margin-left: 10px;">Take Quiz Again</button>
-            `;
-
-            document.getElementById('restartQuiz').addEventListener('click', () => {
-                currentQuizStep = 0;
-                quizAnswers = {};
-                quizResultContainer.style.display = 'none';
-                quizQuestion.style.display = 'block';
-                quizOptionsContainer.style.display = 'grid';
-                loadQuizStep(currentQuizStep);
-            });
-        }
-
-        // Initialize quiz
-        loadQuizStep(currentQuizStep);
-
-        // Founder Audio
+        // Audio Player
         const playStoryBtn = document.getElementById('playStoryBtn');
         const founderAudio = document.getElementById('founderAudio');
 
         playStoryBtn.addEventListener('click', () => {
-            if (founderAudio.paused) {
-                founderAudio.play();
-                playStoryBtn.innerHTML = '<i class="fas fa-pause-circle"></i> Pause Story';
-            } else {
-                founderAudio.pause();
-                playStoryBtn.innerHTML = '<i class="fas fa-play-circle"></i> Hear My Story';
-            }
-        });
-
-        // Before & After Slider
-        const beforeAfterSlider = document.getElementById('beforeAfterSlider');
-        if (beforeAfterSlider) {
-            beforeAfterSlider.addEventListener('input', (e) => {
-                const sliderValue = e.target.value;
-                const afterImage = document.querySelector('.after');
-                afterImage.style.clipPath = `inset(0 ${100 - sliderValue}% 0 0)`;
-            });
-        }
-
-        // Exit Intent Popup
-        let exitIntentShown = false;
-        document.addEventListener('mouseout', (e) => {
-            if (e.clientY < 0 && !exitIntentShown) {
-                exitIntentShown = true;
-                Swal.fire({
-                    title: 'Don\'t Miss Out!',
-                    text: 'Get a FREE consultation before you go!',
-                    icon: 'warning',
-                    showCancelButton: true,
-                    confirmButtonText: 'Yes, I want help!',
-                    cancelButtonText: 'No, thanks',
-                    confirmButtonColor: '#2E8B57',
-                    cancelButtonColor: '#dc3545'
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        window.location.href = "#contact-form";
-                    }
+            const playPromise = founderAudio.play();
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    playStoryBtn.innerHTML = '<i class="fas fa-pause-circle"></i> Pause Story';
+                }).catch(error => {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Audio Player',
+                        html: 'If the audio does not play automatically, please <a href="audio/founder-story.mp3" target="_blank" style="color: #008060; font-weight: bold;">click here to listen</a>.'
+                    });
                 });
             }
         });
+        founderAudio.addEventListener('pause', () => 
+            playStoryBtn.innerHTML = '<i class="fas fa-play-circle"></i> Hear My Story'
+        );
+        founderAudio.addEventListener('ended', () => 
+            playStoryBtn.innerHTML = '<i class="fas fa-play-circle"></i> Hear My Story'
+        );
 
-        // Initialize Particles.js
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 30,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: ["#2E8B57", "#3498DB", "#20B2AA"]
-                },
-                shape: {
-                    type: "circle",
-                    stroke: {
-                        width: 0,
-                        color: "#000000"
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 2,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#2E8B57",
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
+        // Counters
+        function animateCounter(el, target) {
+            let current = 0;
+            const inc = target / 100;
+            const timer = setInterval(() => {
+                current += inc;
+                if (current >= target) {
+                    el.textContent = target;
+                    clearInterval(timer);
                 }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: "grab"
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push"
-                    },
-                    resize: true
-                }
+                else el.textContent = Math.floor(current);
+            }, 20);
+        }
+        const counterObs = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) {
+                animateCounter(document.getElementById('patientCounter'), 13);
+                animateCounter(document.getElementById('countryCounter'), 6);
+                animateCounter(document.getElementById('treatmentCounter'), 20);
+                counterObs.disconnect();
             }
+        }, { threshold: 0.5 });
+        counterObs.observe(document.querySelector('.success-counter'));
+
+        // Cost Calculator
+        const costs = {
+            "Heart Surgery": { India: "$5k-$10k", Turkey: "$8k-$15k", UAE: "$12k-$20k", Thailand: "$7k-$12k", Germany: "$20k-$35k", UK: "$25k-$40k" },
+            "Kidney Transplant": { India: "$12k-$18k", Turkey: "$15k-$25k", UAE: "$20k-$30k", Thailand: "$15k-$20k", Germany: "$30k-$50k", UK: "$40k-$60k" },
+            "Cancer Treatment": { India: "$3k-$10k", Turkey: "$5k-$15k", UAE: "$8k-$20k", Thailand: "$4k-$12k", Germany: "$15k-$30k", UK: "$20k-$40k" },
+            "Orthopedic Surgery": { India: "$4k-$8k", Turkey: "$6k-$12k", UAE: "$8k-$15k", Thailand: "$5k-$10k", Germany: "$12k-$25k", UK: "$15k-$30k" },
+            "Neurological Surgery": { India: "$6k-$12k", Turkey: "$8k-$15k", UAE: "$10k-$20k", Thailand: "$7k-$14k", Germany: "$20k-$40k", UK: "$25k-$45k" },
+            "Fertility Treatment": { India: "$3k-$8k", Turkey: "$4k-$10k", UAE: "$6k-$12k", Thailand: "$4k-$9k", Germany: "$10k-$20k", UK: "$12k-$25k" }
+        };
+        document.getElementById('calculateBtn').addEventListener('click', () => {
+            const c = document.getElementById('conditionSelect').value;
+            const co = document.getElementById('countrySelect').value;
+            if(!c || !co) return Swal.fire('Oops', 'Please select both condition and country!', 'warning');
+            const res = document.getElementById('costResult');
+            res.style.display = 'block';
+            res.innerHTML = `<h3 style="color: #008060;">${c} in ${co}</h3><p style="font-size: 1.8rem; font-weight: 700; color: #00A86B; margin: 10px 0;">${costs[c][co]}</p><p style="font-size: 0.9rem; color: #7F8C8D;">*Estimates vary by hospital. Contact us for an exact quote.</p>`;
+        });
+
+        // Quiz
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', () => {
+                document.querySelectorAll('.quiz-option').forEach(opt => opt.classList.remove('selected'));
+                option.classList.add('selected');
+            });
+        });
+        document.getElementById('quizBtn').addEventListener('click', () => {
+            const selected = document.querySelector('.quiz-option.selected');
+            if (!selected) return Swal.fire('Oops', 'Please select your budget!', 'warning');
+            const budget = selected.getAttribute('data-value');
+            const res = document.getElementById('quizResult');
+            res.style.display = 'block';
+            let recommendation = '';
+            if (budget === 'Under $5,000') {
+                recommendation = '<p style="font-size: 1.1rem; color: #008060;"><strong>Recommended: India or Thailand</strong><br>Both offer high-quality, affordable treatments within your budget.</p>';
+            } else if (budget === '$5,000 - $15,000') {
+                recommendation = '<p style="font-size: 1.1rem; color: #008060;"><strong>Recommended: Turkey or UAE</strong><br>These destinations provide excellent value and advanced medical technology.</p>';
+            } else {
+                recommendation = '<p style="font-size: 1.1rem; color: #008060;"><strong>Recommended: Germany or UK</strong><br>For premium, cutting-edge treatments, these are the best options.</p>';
+            }
+            res.innerHTML = `<h3 style="color: #008060;">Your Recommendation</h3>${recommendation}`;
+        });
+
+        // Before/After Slider
+        const slider = document.getElementById('beforeAfterSlider');
+        const beforeImg = document.querySelector('.before');
+        const afterImg = document.querySelector('.after');
+        slider.addEventListener('input', () => {
+            afterImg.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
         });
     </script>
 </body>
