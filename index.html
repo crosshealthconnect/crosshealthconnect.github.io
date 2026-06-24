@@ -221,7 +221,7 @@
         /* Hero */
         #hero {
             height: 100vh;
-            background: linear-gradient(135deg, rgba(0, 128, 96, 0.85), rgba(0, 168, 107, 0.75)), url('images/hero-bg.jpg');
+            background: linear-gradient(135deg, rgba(0, 128, 96, 0.85), rgba(0, 168, 107, 0.75)), url('https://crosshealthconnect.github.io/images/about-us.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -424,48 +424,25 @@
             padding: 100px 0;
             background: var(--white);
         }
-        .before-after-slider {
-            position: relative;
-            width: 100%;
-            height: 450px;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: var(--shadow-lg);
+        .before-after-container {
+            display: flex;
+            gap: 20px;
             max-width: 800px;
             margin: 0 auto;
+            align-items: center;
         }
-        .before, .after {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .before-after-img {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 450px;
+        }
+        .before-after-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-        .after {
-            clip-path: inset(0 50% 0 0);
-        }
-        .slider {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 5px;
-            -webkit-appearance: none;
-            appearance: none;
-            background: transparent;
-            outline: none;
-            z-index: 10;
-        }
-        .slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: var(--white);
-            border: 3px solid var(--primary-green);
-            cursor: pointer;
+            display: block;
         }
 
         /* Forms & Calculators */
@@ -957,6 +934,9 @@
             .about-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
+            .before-after-container {
+                flex-direction: column;
+            }
         }
         @media (max-width: 768px) {
             .nav-links {
@@ -1096,7 +1076,7 @@
             </div>
             <div class="about-grid">
                 <div class="about-img">
-                    <img src="images/about-us.jpg" alt="African family receiving medical consultation" loading="lazy">
+                    <img src="https://crosshealthconnect.github.io/images/about-us.jpg" alt="African family receiving medical consultation" loading="lazy">
                 </div>
                 <div class="about-text">
                     <h3>Our Mission</h3>
@@ -1115,7 +1095,7 @@
             </div>
             <div class="founder-grid">
                 <div class="founder-img">
-                    <img src="founder.jpg" alt="Emmanuel Maeke Kioko, Founder of CrossHealthConnect" loading="lazy">
+                    <img src="https://crosshealthconnect.github.io/images/founder.jpg" alt="Emmanuel Maeke Kioko, Founder of CrossHealthConnect" loading="lazy">
                 </div>
                 <div class="founder-text">
                     <p>CrossHealthConnect was born from a simple realization: too many African patients know they need specialized treatment but don't know where to start.</p>
@@ -1130,7 +1110,7 @@
                     <button id="playStoryBtn" class="btn btn-primary" style="margin-top: 20px;">
                         <i class="fas fa-play-circle"></i> Hear My Story
                     </button>
-                    <audio id="founderAudio" src="audio/founder-story.mp3" preload="auto"></audio>
+                    <audio id="founderAudio" src="https://crosshealthconnect.github.io/audio/founder-story.mp3" preload="auto"></audio>
                 </div>
             </div>
         </div>
@@ -1142,10 +1122,13 @@
                 <h2>Before & After</h2>
                 <p>See the transformative power of global healthcare</p>
             </div>
-            <div class="before-after-slider">
-                <img src="images/before-orthopedic.jpg" class="before" alt="Before Treatment" loading="lazy">
-                <img src="images/after-orthopedic.jpg" class="after" alt="After Treatment" loading="lazy">
-                <input type="range" min="0" max="100" value="50" class="slider" id="beforeAfterSlider">
+            <div class="before-after-container">
+                <div class="before-after-img">
+                    <img src="https://crosshealthconnect.github.io/images/before-orthopedic.jpg" alt="Before Treatment" loading="lazy">
+                </div>
+                <div class="before-after-img">
+                    <img src="https://crosshealthconnect.github.io/images/after-orthopedic.jpg" alt="After Treatment" loading="lazy">
+                </div>
             </div>
         </div>
     </section>
@@ -1468,7 +1451,7 @@
                     <div class="testimonial-content">
                         <p>CrossHealthConnect made it possible for my father to receive life-saving heart surgery in India. The entire process, from initial consultation to post-surgery follow-up, was seamless. We couldn't have asked for better support during such a difficult time.</p>
                         <div class="author">
-                            <img src="images/patient1.jpg" alt="Patient" loading="lazy">
+                            <img src="https://crosshealthconnect.github.io/images/patient1.jpg" alt="Patient" loading="lazy">
                             <div class="author-info">
                                 <h4>Heart Surgery Patient from Nairobi</h4>
                                 <p>Nairobi, Kenya</p>
@@ -1480,7 +1463,7 @@
                     <div class="testimonial-content">
                         <p>I was diagnosed with a complex condition and needed specialized treatment that wasn't available in Kenya. CrossHealthConnect connected me with a top oncologist in Turkey. They handled all the logistics, including my visa and accommodation. Today, I'm on the path to recovery, thanks to their exceptional service.</p>
                         <div class="author">
-                            <img src="images/patient2.jpg" alt="Patient" loading="lazy">
+                            <img src="https://crosshealthconnect.github.io/images/patient2.jpg" alt="Patient" loading="lazy">
                             <div class="author-info">
                                 <h4>Cancer Treatment Patient from Kampala</h4>
                                 <p>Kampala, Uganda</p>
@@ -1492,7 +1475,7 @@
                     <div class="testimonial-content">
                         <p>As a mother, my biggest fear was not being able to afford quality healthcare for my child. CrossHealthConnect not only found us an affordable option in Thailand but also ensured we felt supported every step of the way. My daughter is now healthy and thriving, and I'm forever grateful.</p>
                         <div class="author">
-                            <img src="images/patient3.jpg" alt="Patient" loading="lazy">
+                            <img src="https://crosshealthconnect.github.io/images/patient3.jpg" alt="Patient" loading="lazy">
                             <div class="author-info">
                                 <h4>Orthopedic Patient from Dar es Salaam</h4>
                                 <p>Dar es Salaam, Tanzania</p>
@@ -1720,14 +1703,6 @@
             });
         });
 
-        // Before/After Slider
-        const slider = document.getElementById('beforeAfterSlider');
-        const beforeImg = document.querySelector('.before');
-        const afterImg = document.querySelector('.after');
-        slider.addEventListener('input', () => {
-            afterImg.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
-        });
-
         // Form Submission
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1823,7 +1798,7 @@
                     Swal.fire({
                         icon: 'info',
                         title: 'Audio Player',
-                        html: 'If the audio does not play automatically, please <a href="audio/founder-story.mp3" target="_blank" style="color: #008060; font-weight: bold;">click here to listen</a>.'
+                        html: 'If the audio does not play automatically, please <a href="https://crosshealthconnect.github.io/audio/founder-story.mp3" target="_blank" style="color: #008060; font-weight: bold;">click here to listen</a>.'
                     });
                 });
             }
