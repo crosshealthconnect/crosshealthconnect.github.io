@@ -6,11 +6,28 @@
     <meta name="description" content="CrossHealthConnect helps African patients access affordable world-class healthcare in India, Turkey, UAE, Thailand, Germany, and the UK.">
     <title>CrossHealthConnect | Bridging Borders. Healing Lives.</title>
     
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    
+    <!-- Tawk.to Chat Widget -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6a3c30829358261d45a301fd/1jrthqvtg';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    
+    <!-- Chart.js for Live Chat Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <style>
         :root {
@@ -103,6 +120,23 @@
             color: var(--white);
         }
 
+        /* Logo Styling */
+        .logo h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            display: flex;
+            gap: 2px;
+        }
+        .logo-cross {
+            color: var(--primary-green);
+        }
+        .logo-health {
+            color: var(--dark-text);
+        }
+        .logo-connect {
+            color: #4285F4;
+        }
+
         /* Section Titles */
         .section-title {
             text-align: center;
@@ -149,22 +183,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .logo h1 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            display: flex;
-            gap: 2px;
-        }
-        .logo-cross {
-            color: var(--primary-green);
-        }
-        .logo-health {
-            color: var(--text-dark);
-        }
-        .logo-connect {
-            color: var(--secondary-green);
         }
 
         .nav-links {
@@ -876,10 +894,44 @@
             transform: scale(1.1);
         }
 
+        /* Live Chat Analytics Container */
+        .chat-analytics-container {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 300px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            padding: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        .chat-analytics-container.visible {
+            display: block;
+        }
+        .chat-analytics-container h4 {
+            color: var(--dark-green);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .chat-analytics-container canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Tawk.to Chat Button */
+        .tawk-to-button {
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 1000;
+        }
+
         /* Dark Mode Toggle */
         .dark-mode-toggle {
             position: fixed;
-            bottom: 100px;
+            bottom: 160px;
             right: 30px;
             z-index: 1000;
         }
@@ -940,6 +992,16 @@
             .hero-buttons {
                 flex-direction: column;
                 align-items: flex-start;
+            }
+            .chat-analytics-container {
+                width: 250px;
+                bottom: 220px;
+            }
+            .tawk-to-button {
+                bottom: 160px;
+            }
+            .dark-mode-toggle {
+                bottom: 220px;
             }
         }
     </style>
@@ -1248,7 +1310,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Why Medical Tourism?</h2>
-                <p>Many patients travel abroad to access specialized treatment, shorter waiting times, advanced medical technology, and expert healthcare professionals.</p>
+                <p>Many patients travel abroad to access specialized treatment, shorter waiting times, advanced medical technology, and expert healthcare professionals. CrossHealthConnect helps patients explore trusted international healthcare options while providing guidance throughout the entire journey.</p>
             </div>
             <div class="medical-tourism-grid">
                 <div class="medical-tourism-item">
@@ -1565,7 +1627,7 @@
                     <div class="footer-logo">
                         <h1>
                             <span class="logo-cross">Cross</span>
-                            <span style="color:white">Health</span>
+                            <span class="logo-health">Health</span>
                             <span class="logo-connect">Connect</span>
                         </h1>
                     </div>
@@ -1612,9 +1674,30 @@
         </div>
     </footer>
 
+    <!-- Tawk.to Chat Button -->
+    <div class="tawk-to-button">
+        <button id="toggleChatAnalytics" class="btn btn-primary" style="border-radius: 20px; padding: 10px 15px; display: flex; align-items: center; gap: 8px;">
+            <i class="fas fa-comments"></i> Live Chat
+        </button>
+    </div>
+
+    <!-- Live Chat Analytics Container -->
+    <div class="chat-analytics-container" id="chatAnalyticsContainer">
+        <h4><i class="fas fa-chart-line"></i> Chat Analytics</h4>
+        <canvas id="chatAnalyticsChart"></canvas>
+    </div>
+
+    <!-- WhatsApp Float -->
     <a href="https://wa.me/254750715218" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button id="darkModeToggle">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -1637,13 +1720,13 @@
             });
         });
 
-        // Animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('show');
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-banner-item, .help-card, .support-card, .treatment-card, .journey-card').forEach(el => observer.observe(el));
+        // Before/After Slider
+        const slider = document.getElementById('beforeAfterSlider');
+        const beforeImg = document.querySelector('.before');
+        const afterImg = document.querySelector('.after');
+        slider.addEventListener('input', () => {
+            afterImg.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
+        });
 
         // Form Submission
         document.getElementById('leadForm').addEventListener('submit', function(e) {
@@ -1664,12 +1747,9 @@
             const mailtoUrl = `mailto:crosshealthconnect@gmail.com?subject=${encodeURIComponent('Medical Request from ' + name)}&body=${encodeURIComponent(mailBody)}`;
 
             Swal.fire({
-                title: 'Request Ready!',
-                html: `Your details are prepared. Choose how to send:`,
-                showCancelButton: true,
-                showConfirmButton: false,
-                cancelButtonText: 'Cancel',
+                title: 'Send Your Request',
                 html: `
+                    <p style="margin-bottom: 20px;">Your details are ready. Choose how to send:</p>
                     <div style="display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
                         <a href="${waUrl}" target="_blank" class="btn btn-green" style="display: inline-flex; align-items: center; gap: 8px; background: #25D366; border-color: #25D366;">
                             <i class="fab fa-whatsapp"></i> Send via WhatsApp
@@ -1679,8 +1759,55 @@
                         </a>
                     </div>
                 `,
+                showCancelButton: true,
+                cancelButtonText: 'Cancel',
                 width: '600px'
             });
+        });
+
+        // Toggle Chat Analytics
+        document.getElementById('toggleChatAnalytics').addEventListener('click', function() {
+            const container = document.getElementById('chatAnalyticsContainer');
+            container.classList.toggle('visible');
+            
+            if (container.classList.contains('visible')) {
+                const ctx = document.getElementById('chatAnalyticsChart').getContext('2d');
+                if (window.chatChart) {
+                    window.chatChart.destroy();
+                }
+                window.chatChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Chat Requests',
+                            data: [12, 19, 8, 15, 22, 18, 25],
+                            borderColor: '#008060',
+                            backgroundColor: 'rgba(0, 128, 96, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            tension: 0.4
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 5
+                                }
+                            }
+                        }
+                    }
+                });
+            }
         });
 
         // Audio Player
@@ -1773,12 +1900,23 @@
             res.innerHTML = `<h3 style="color: #008060;">Your Recommendation</h3>${recommendation}`;
         });
 
-        // Before/After Slider
-        const slider = document.getElementById('beforeAfterSlider');
-        const beforeImg = document.querySelector('.before');
-        const afterImg = document.querySelector('.after');
-        slider.addEventListener('input', () => {
-            afterImg.style.clipPath = `inset(0 ${100 - slider.value}% 0 0)`;
+        // Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('show');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.step-card, .testimonial-card, .country-card, .why-card, .trust-banner-item, .help-card, .support-card, .treatment-card, .journey-card').forEach(el => observer.observe(el));
+
+        // Dark Mode Toggle
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.getElementById('darkModeToggle');
+            if (document.body.classList.contains('dark-mode')) {
+                btn.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+            } else {
+                btn.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+            }
         });
     </script>
 </body>
